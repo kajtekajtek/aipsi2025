@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Darmowy edytor diagramów online</title>
+<meta name="description" content="Darmowy edytor diagramów online: Visual Paradigm Online Free Edition. Rysuj diagramy UML, ERD, schematy organizacyjne, plany pięter - za darmo! Twórz profesjonalne diagramy za pomocą potężnego i intuicyjnego narzędzia do rysowania w sieci.">
+<meta name="keywords" content="visual paradigm online,darmowy edytor uml,darmowe narzędzie uml,darmowe oprogramowanie uml,darmowe narzędzie uml online,darmowe narzędzie erd,narzędzie erd,edytor erd">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://online.visual-paradigm.com/favicon-32x32.png">
+				<link rel="icon" type="image/png" sizes="16x16" href="https://online.visual-paradigm.com/favicon-16x16.png">
+			<meta charset="utf-8">
+<meta name="theme-color" content="#ffffff">   
+<link rel="alternate" hreflang="pl" href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-online-diagram-editor/">
+<link rel="alternate" hreflang="en" href="https://online.visual-paradigm.com/diagrams/solutions/free-online-diagram-editor/">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/css.css" rel="preload" as="style">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/bootstrap.min.css" rel="preload" as="style">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/style.css" rel="preload" as="style">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/all.min.css" rel="preload" as="style">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/crownIndicator.css" rel="preload" as="style">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/jquery-3.5.1.min.js" rel="preload" as="script">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/jquery.easing.min.js" rel="preload" as="script">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/bootstrap.min.js" rel="preload" as="script">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/custom.js" rel="preload" as="script">
+
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/css.css">
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/style.css">
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/all.min.css">
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/crownIndicator.css">
+<script type="text/javascript" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/jquery.easing.min.js"></script>
+<script type="text/javascript" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/bootstrap.min.js"></script>
+<script type="text/javascript" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/custom.js"></script>
+<script>
+	var lastErrorMessage; 
+	window.addEventListener('error', function (e) {
+		var result = '';
+		result += 'Page URL: ' + window.location.href + '\n';
+		result += 'Message: ' + e.message + '\n';
+		if (e.filename) {
+			result += 'File: ' + e.filename + ' (' + e.lineno + ', ' + e.colno + ')\n';
+		}
+		if (e.error && e.error.stack) {
+			result += 'Stack: ' + e.error.stack + '\n';
+		}
+		if (e.detail) {
+			result += e.detail.error_msg + ": " + e.detail.error_code + '\n';
+		}
+		if (lastErrorMessage == result) {
+			return;
+		}
+		lastErrorMessage = result;
+		fetch('/rest/log', {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify({
+				type: 'error',
+				message: result
+			})
+		});
+	});
+</script><link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/feature-slider.css">
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/solutions.css">
+
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/swiper-4.1.0.min.css">
+
+</head>
+<body class="lang-pl solutions">
+
+	<link rel="stylesheet" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/animate.css">
+<link rel="stylesheet" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/jquery-simple-mobilemenu-slide.css">
+<script src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/jquery-simple-mobilemenu.min.js"></script>
+
+<meta name="theme-color" content="#ffffff">
+<div class="topbar-container" id="main-index-header">
+	<nav id="mainNav" class="navbar fixed-top-bar navbar-fixed-top affix" data-spy="affix" data-offset-top="70">
+		<!-- Global top nav -->
+		
+<nav id="stickymainNav" class="navbar navbar-default navbar-doublerow  navbar-trans navbar-fixed-top">
+
+			<!-- down nav -->
+
+			<div class="container">
+				<div class="navbar-header">
+					
+<div class="sub-features-wrapper">
+					<a class="navbar-brand hidden-sm" href="https://online.visual-paradigm.com/pl/"><img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/vp-online-logo.webp" alt="Logo Visual Paradigm Online"></a> <a class="navbar-brand hidden-md hidden-lg hidden-xs" href="https://online.visual-paradigm.com/pl/"><img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/vp-online-logo-1.webp"></a>
+				</div>				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="product-megamenu" class="dropdown megamenu-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Eksploruj<span class="badge badge-new-v1">Nowość</span><span class="caret"></span></a>
+
+	<ul class="product-megamenu-item dropdown-menu megamenu-content " role="menu">
+
+		<li class="col-sm-12 col-lg-12 col-xs-12" id="menu-explore-products">
+
+
+
+			<div class="tab-vertical">
+				<ul class="nav nav-tabs" id="top-product-explore-productTab" role="tablist">
+					<li class="nav-item selected-tab"><a class="nav-link" id="featured-vertical-tab" data-toggle="tab" href="#featured-products" role="tab" aria-controls="home" aria-selected="true">Featured</a></li>
+					<li class="nav-item"><a class="nav-link" id="digital-publication-vertical-tab" data-toggle="tab" href="#digital-publication-vertical" role="tab" aria-controls="profile" aria-selected="false">Digital Publication</a></li>
+					<li class="nav-item"><a class="nav-link" id="animation-vertical-tab" data-toggle="tab" href="#animation-vertical" role="tab" aria-controls="contact" aria-selected="false">Animation Maker</a></li>
+					<li class="nav-item"><a class="nav-link" id="graphic-vertical-tab" data-toggle="tab" href="#graphic-vertical" role="tab" aria-controls="contact" aria-selected="false">Graphic Designer</a></li>
+					<li class="nav-item"><a class="nav-link" id="diagram-vertical-tab" data-toggle="tab" href="#diagram-vertical" role="tab" aria-controls="contact" aria-selected="false">Diagramming</a></li>
+					<li class="nav-item"><a class="nav-link" id="docs-vertical-tab" data-toggle="tab" href="#docs-vertical" role="tab" aria-controls="contact" aria-selected="false">Document Editing</a></li>
+					<li class="nav-item"><a class="nav-link" id="all-vertical-tab" data-toggle="tab" href="#all-vertical" role="tab" aria-controls="contact" aria-selected="false">All Tools</a></li>
+					<li class="nav-item"><a class="nav-link" id="others-vertical-tab" data-toggle="tab" href="#others-vertical" role="tab" aria-controls="contact" aria-selected="false">Other Products</a></li>
+
+				</ul>
+				<div class="tab-content" id="top-product-explore-productContent">
+					<div class="tab-pane-p active-tab" id="featured-products" role="tabpanel" aria-labelledby="featured-vertical-tab">
+
+						<ul class="product-tool-list">
+							<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp">
+										</div>
+
+										<div class="tool-title-explore">
+											<h1 class="title">Flipbook Maker</h1>
+											<p class="desc">Design online Ebook and slideshow with Fliplify</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://explainer.visual-paradigm.com/pl/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/anifuzion-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Animation Maker</h1>
+											<p class="desc">Create 2D and 3D animations with AniFuzion.</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PPT Viewer</h1>
+											<p class="desc">Convert PPT to online slideshow viewer</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PDF Editor</h1>
+											<p class="desc">Lightweight PDF editor, tools and converters</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/infoart/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/designer-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Graphic Designer</h1>
+											<p class="desc">Professional visual creations</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/diagrams/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagram-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Diagram Maker</h1>
+											<p class="desc">Make flowchart, software, business diagrams</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-office/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Office Editors</h1>
+											<p class="desc">Create / edit Word, Spreadsheet &amp; PPT</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/charts/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/chart-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Chart Maker</h1>
+											<p class="desc">Visualize data effortlessly</p>
+										</div>
+									</div></a></li>
+
+						</ul>
+					</div>
+					<div class="tab-pane-p" id="digital-publication-vertical" role="tabpanel" aria-labelledby="digital-publication-vertical-tab">
+						<ul class="product-tool-list">
+							<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp">
+										</div>
+
+										<div class="tool-title-explore">
+											<h1 class="title">Flipbook Maker</h1>
+											<p class="desc">Design online Ebook and slideshow with Fliplify</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PDF Editor</h1>
+											<p class="desc">Lightweight PDF editor, tools and converters</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-office/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Office Editors</h1>
+											<p class="desc">Create / edit Word, Spreadsheet &amp; PPT</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/file-converters/file-conversion-tools/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/files-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">File Converters</h1>
+											<p class="desc">Convert files with ease</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PPT Viewer</h1>
+											<p class="desc">Convert PPT to online slideshow viewer</p>
+										</div>
+									</div></a></li>
+
+
+						</ul>
+					</div>
+					<div class="tab-pane-p" id="animation-vertical" role="tabpanel" aria-labelledby="animation-vertical-tab">
+
+						<ul class="product-tool-list">
+							<li><a href="https://explainer.visual-paradigm.com/pl/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/anifuzion-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Animation Maker</h1>
+											<p class="desc">Create 2D and 3D animations with AniFuzion.</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp">
+										</div>
+
+										<div class="tool-title-explore">
+											<h1 class="title">Flipbook Maker</h1>
+											<p class="desc">Design online Ebook and slideshow with Fliplify</p>
+										</div>
+									</div></a></li>
+
+
+						</ul>
+					</div>
+					<div class="tab-pane-p" id="graphic-vertical" role="tabpanel" aria-labelledby="graphic-vertical-tab">
+						<ul class="product-tool-list">
+							<li><a href="https://online.visual-paradigm.com/pl/infoart/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/designer-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Graphic Designer</h1>
+											<p class="desc">Professional visual creations</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/charts/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/chart-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Chart Maker</h1>
+											<p class="desc">Visualize data effortlessly</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/photo-effects-studio/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/photo-effects-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Photo Effect Tools</h1>
+											<p class="desc">Enhance images creatively</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp">
+										</div>
+
+										<div class="tool-title-explore">
+											<h1 class="title">Flipbook Maker</h1>
+											<p class="desc">Design online Ebook and slideshow with Fliplify</p>
+										</div>
+									</div></a></li>
+
+
+
+						</ul>
+					</div>
+
+
+					<div class="tab-pane-p" id="diagram-vertical" role="tabpanel" aria-labelledby="diagram-vertical-tab">
+						<ul class="product-tool-list">
+							<li><a href="https://online.visual-paradigm.com/pl/diagrams/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagram-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Diagram Maker</h1>
+											<p class="desc">Make flowchart, software, business diagrams</p>
+										</div>
+									</div></a></li>
+
+
+
+
+						</ul>
+					</div>
+					<div class="tab-pane-p" id="docs-vertical" role="tabpanel" aria-labelledby="docs-vertical-tab">
+						<ul class="product-tool-list">
+							<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PDF Editor</h1>
+											<p class="desc">Lightweight PDF editor, tools and converters</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-office/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Office Editors</h1>
+											<p class="desc">Create / edit Word, Spreadsheet &amp; PPT</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/file-converters/file-conversion-tools/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/files-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">File Converters</h1>
+											<p class="desc">Convert files with ease</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PPT Viewer</h1>
+											<p class="desc">Convert PPT to online slideshow viewer</p>
+										</div>
+									</div></a></li>
+
+
+
+						</ul>
+					</div>
+					<div class="tab-pane-p" id="all-vertical" role="tabpanel" aria-labelledby="all-vertical-tab">
+						<ul class="product-tool-list">
+							<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp">
+										</div>
+
+										<div class="tool-title-explore">
+											<h1 class="title">Flipbook Maker</h1>
+											<p class="desc">Design online Ebook and slideshow with Fliplify</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://explainer.visual-paradigm.com/pl/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/anifuzion-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Animation Maker</h1>
+											<p class="desc">Create 2D and 3D animations with AniFuzion.</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PPT Viewer</h1>
+											<p class="desc">Convert PPT to online slideshow viewer</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">PDF Editor</h1>
+											<p class="desc">Lightweight PDF editor, tools and converters</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/diagrams/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagram-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Diagram Maker</h1>
+											<p class="desc">Make flowchart, software, business diagrams</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/infoart/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/designer-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Graphic Designer</h1>
+											<p class="desc">Professional visual creations</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/online-office/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Office Editors</h1>
+											<p class="desc">Create / edit Word, Spreadsheet &amp; PPT</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/charts/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/chart-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Chart Maker</h1>
+											<p class="desc">Visualize data effortlessly</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/forms/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/form-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Form Builder</h1>
+											<p class="desc">Simplify form creation</p>
+										</div>
+									</div></a></li>
+
+							<li><a href="https://online.visual-paradigm.com/pl/file-converters/file-conversion-tools/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/files-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">File Converters</h1>
+											<p class="desc">Convert files with ease</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/photo-effects-studio/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/photo-effects-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Photo Effect Tools</h1>
+											<p class="desc">Enhance images creatively</p>
+										</div>
+									</div></a></li>
+
+
+
+						</ul>
+					</div>
+
+					<div class="tab-pane-p" id="others-vertical" role="tabpanel" aria-labelledby="others-vertical-tab">
+						<ul class="product-tool-list">
+							<li><a href="https://www.visual-paradigm.com/" target="_blank"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/vp-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Visual Paradigm Desktop</h1>
+											<p class="desc">IT project and transformation tools</p>
+										</div>
+									</div></a></li>
+							<li><a href="https://online.visual-paradigm.com/pl/board/"><div class="feature-col  tool-explore-wrap">
+										<div class="tool-explore">
+											<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/smartboard-logo.webp">
+										</div>
+										<div class="tool-title-explore">
+											<h1 class="title">Smart Board</h1>
+											<p class="desc">Ideation and brainstorm with mind maps</p>
+										</div>
+									</div></a></li>
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+		</li>
+
+	</ul></li>
+
+<script>
+	$(document).ready(function() {
+		$("#top-product-explore-productTab a").click(function(e) {
+			e.preventDefault();
+			var targetTab = $(this).attr("href");
+			$("#top-product-explore-productTab li").removeClass("selected-tab");
+			$("#top-product-explore-productTab li").removeClass("active");
+			$(this).parent("li").addClass("selected-tab");
+			$(".tab-pane-p").removeClass("active-tab");
+			$(".tab-pane-p").removeClass("active");
+			$(targetTab).addClass("active-tab");
+		});
+	});
+</script><li class="features-multi-level-menu">
+<a href="https://online.visual-paradigm.com/features/" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false"> 
+	<span style="border: unset; background: unset; padding: 0px">Funkcje</span> 
+	<span class="caret" style="margin-left: 4px;"></span>
+</a>
+
+	<ul id="dropdown-features-menu" class="dropdown-menu feature-dropdown">
+<li><a href="https://online.visual-paradigm.com/pl/features/pdf-editing/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Online PDF Tool Suite</span>
+				</div>
+		</a></li>
+		
+		<li><a href="https://online.visual-paradigm.com/pl/features/online-office-tool-suite/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Online Office Tool Suite</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/presentation-maker/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Presentation Maker</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/visual-design-editor/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Visual Design Editor</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/graphic-design-resources/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Graphic Design Resources</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/publish-as-flipbooks/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Free Flipbook Maker</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/online-chart-maker/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Chart Maker</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/photo-editing/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Edycja zdjęć</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/features/publish-and-share/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Publikowanie i udostępnianie</span>
+				</div>
+		</a></li>
+	<li><a href="https://online.visual-paradigm.com/pl/features/real-time-collaboration/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Real-Time Collaboration</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/forms/features/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Kreator formularzy</span>
+				</div>
+		</a></li>
+	
+	</ul></li>
+<li class="resources-multi-level-menu">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+	<span style="border: unset; background: unset; padding: 0px">Zasoby</span> 
+	<span class="caret" style="margin-left: 4px;"></span>
+</a>
+
+	<ul id="dropdown-resources-menu" class="dropdown-menu feature-dropdown">
+<li class="dropdown-submenu">
+			<div class="nested-second-level">
+				<a href="#" class="logo-product-title">Kreacje społecznościowe<span class="caret" style="margin-left: 4px;"></span></a>
+
+			</div>
+			<ul class="dropdown-menu">
+				<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/library/" data-locale="en">
+						<div class="feature-dropdown-menu">
+							<span class="logo-product-title">Książka / Pokaz slajdów</span>
+						</div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/community/" data-locale="en">
+						<div class="feature-dropdown-menu">
+							<span class="logo-product-title">Projekt / schemat</span>
+						</div>
+				</a></li>
+			</ul>
+		</li>
+		<li><a href="https://whats-new.visual-paradigm.com/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Co nowego</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/learn/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Ucz się</span>
+				</div>
+		</a></li>
+		<li><a href="https://blog.visual-paradigm.com/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Blog</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/knowledge/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Wiedza</span>
+				</div>
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/diagrams/partner/academic/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Partner akademicki</span>
+				</div>
+		</a></li>
+	</ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+Rozwiązania<span class="caret"></span></a>
+							<ul id="menu-solutions" class="dropdown-menu">
+							<li>
+					<a href="https://online.visual-paradigm.com/pl/solutions/education/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Edukacja</span>
+				</div>
+			</a>
+				</li>
+								<li>
+					<a href="https://online.visual-paradigm.com/pl/solutions/entertainment/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Rozrywka</span>
+				</div>
+			</a>
+				</li>
+        		<li>
+					<a href="https://online.visual-paradigm.com/pl/solutions/finance/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Finanse</span>
+				</div>
+			</a>
+				</li>
+			<li>
+			<a href="https://online.visual-paradigm.com/pl/solutions/marketing/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Marketing</span>
+				</div>
+			</a>
+		</li>
+	<li>
+			<a href="https://online.visual-paradigm.com/pl/solutions/medical/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Medycyna</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="https://online.visual-paradigm.com/pl/solutions/real-estate/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Nieruchomości</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="https://online.visual-paradigm.com/pl/solutions/retail/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Handel detaliczny</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="https://online.visual-paradigm.com/pl/solutions/startups/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Startupy</span>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="https://online.visual-paradigm.com/pl/solutions/travel/" data-locale="en">
+				<div class="feature-dropdown-menu">
+					<span class="logo-product-title">Podróże</span>
+				</div>
+			</a>
+		</li>
+							</ul> </li>
+							
+							<li class="dropdown dropdown-templates dropdown-large"><a href="https://online.visual-paradigm.com/diagrams/templates" class="dropdown-toggle template-link" role="button" aria-haspopup="true" aria-expanded="false">
+		Szablony<span class="caret" style="margin-left: 4px;"></span> </a>
+	<ul class="dropdown-templates-menu" style="width: 921.6px; transform: translate(-70%);">
+		<li class="templates-menu-category subOpen"><a href="https://online.visual-paradigm.com/pl/infoart/templates" class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/visuals-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header items">Materiały wizualne</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </a>
+					<ul class="subTemplateItems">
+					<a href="https://online.visual-paradigm.com/pl/infoart/templates/brochures/">
+									<li><span class="items">Broszury</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/infoart/templates/greeting-cards/">
+									<li><span class="items">Kartki okolicznościowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/infoart/templates/infographics/">
+									<li><span class="items">Infografika</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/infoart/templates/instagram-posts/">
+									<li><span class="items">Posty na Instagramie</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/infoart/templates/invitations/">
+									<li><span class="items">Zaproszenia</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/infoart/templates/posters/">
+									<li><span class="items">Plakaty</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/infoart/templates">
+									<li class="template-seeAll"><span class="items">Zobacz wszystkie</span></li>
+								</a>
+							</ul>
+			</li>
+			<li class="templates-menu-category subOpen"><a href="https://online.visual-paradigm.com/pl/diagrams/templates" class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagrams-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header items">Diagramy</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </a>
+					<ul class="subTemplateItems">
+					<a href="https://online.visual-paradigm.com/pl/diagrams/templates/archimate-diagram/">
+									<li><span class="items">ArchiMate</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/diagrams/templates/?category=floor-plan">
+									<li><span class="items">Plan piętra</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/diagrams/templates/?category=flowchart">
+									<li><span class="items">Schemat blokowy</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/diagrams/templates/genogram/">
+									<li><span class="items">Genogram</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/diagrams/templates/mind-map-diagram/">
+									<li><span class="items">Mapa myśli</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/diagrams/templates/class-diagram/">
+									<li><span class="items">Diagramy klas UML</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/diagrams/templates">
+									<li class="template-seeAll"><span class="items">Zobacz wszystkie</span></li>
+								</a>
+							</ul>
+			</li>
+			<li class="templates-menu-category subOpen"><a href="https://online.visual-paradigm.com/pl/charts/templates" class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/charts-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header items">Wykresy</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </a>
+					<ul class="subTemplateItems">
+					<a href="https://online.visual-paradigm.com/pl/charts/templates/?category=bar">
+									<li><span class="items">Wykresy słupkowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/charts/templates/candlestick/">
+									<li><span class="items">Wykres świecowy</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/charts/templates/doughnut-charts/">
+									<li><span class="items">Wykresy pączkowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/charts/templates/?category=line">
+									<li><span class="items">Wykresy liniowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/charts/templates/?category=pie">
+									<li><span class="items">Wykresy kołowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/charts/templates/?category=radar">
+									<li><span class="items">Wykresy radarowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/charts/templates">
+									<li class="template-seeAll"><span class="items">Zobacz wszystkie</span></li>
+								</a>
+							</ul>
+			</li>
+			<li class="templates-menu-category subOpen"><a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates" class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/flipbooks-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header items">Flipbooki</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </a>
+					<ul class="subTemplateItems">
+					<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates/booklets/">
+									<li><span class="items">Broszury</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates/business-portfolios/">
+									<li><span class="items">Portfolio biznesowe</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates/catalogs/">
+									<li><span class="items">Katalogi</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates/lookbooks/">
+									<li><span class="items">Lookbooki</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates/prospectuses/">
+									<li><span class="items">Prospekty</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates/personal-portfolios/">
+									<li><span class="items">Portfele osobiste</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/flipbook-maker/templates">
+									<li class="template-seeAll"><span class="items">Zobacz wszystkie</span></li>
+								</a>
+							</ul>
+			</li>
+			<li class="templates-menu-category subOpen"><a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates" class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/photobooks-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header items">Fotoksiążki</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </a>
+					<ul class="subTemplateItems">
+					<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates/baby-photo-books/">
+									<li><span class="items">Fotoksiążki dla dzieci.</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates/everyday-photo-books/">
+									<li><span class="items">Fotoksiążki na co dzień.</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates/family-photo-books/">
+									<li><span class="items">Fotoksiążki rodzinne.</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates/pet-photo-books/">
+									<li><span class="items">Fotoksiążki ze zwierzętami.</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates/travel-photo-books/">
+									<li><span class="items">Fotoksiążki podróżnicze.</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates/wedding-photo-books/">
+									<li><span class="items">Fotoksiążki ślubne.</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/photo-book-maker/templates">
+									<li class="template-seeAll"><span class="items">Zobacz wszystkie</span></li>
+								</a>
+							</ul>
+			</li>
+			<div class="two-row ">
+			<li class="templates-menu-category subOpen"><a href="https://explainer.visual-paradigm.com/pl/templates/" class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/animations-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header ">Animations</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </a>
+					<ul class="subTemplateItems">
+					<a href="https://explainer.visual-paradigm.com/pl/templates/category/explainer-video/">
+									<li><span class="items">Explainer Videos</span></li>
+								</a>
+							<a href="https://explainer.visual-paradigm.com/pl/templates/category/marketing-and-e-commerce/">
+									<li><span class="items">Marketing Videos</span></li>
+								</a>
+							<a href="https://explainer.visual-paradigm.com/pl/templates/category/storytelling-scenes/">
+									<li><span class="items">Storytelling Videos</span></li>
+								</a>
+							<a href="https://explainer.visual-paradigm.com/pl/templates/">
+									<li class="template-seeAll"><span class="items">Zobacz wszystkie</span></li>
+								</a>
+							</ul>
+			</li>
+			<li class="templates-menu-category subOpen"><span class="template-cateogry-link">
+					<div class="img-container items">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/productivity-icon.webp">
+				</div>
+				<div class="headerContainer">
+					<h4 class="templates-menu-category-header ">Biuro</h4>
+					<span class="caret" style="margin-left: 4px;"></span>
+				</div> </span>
+					<ul class="subTemplateItems">
+					<a href="https://online.visual-paradigm.com/pl/document-editor/templates/">
+									<li><span class="items">Dokumenty</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/presentation-software/templates/">
+									<li><span class="items">Prezentacje</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/spreadsheet-editor/templates/">
+									<li><span class="items">Arkusze kalkulacyjne</span></li>
+								</a>
+							<a href="https://online.visual-paradigm.com/pl/forms/templates/">
+									<li><span class="items">Formularz</span></li>
+								</a>
+							</ul>
+			</li>
+			</div>
+			</ul></li>
+
+<script>
+	//$('.dropdown-templates-menu').hide();
+
+	$('.subOpen').on(
+			{
+				mouseenter : function() {
+					if ($(window).width() < 767) {
+						$(this).find('.subTemplateItems').stop(true, true)
+								.delay(100).fadeIn(200);
+					}
+				},
+				mouseleave : function() {
+					if ($(window).width() < 767) {
+						$(this).find('.subTemplateItems').stop(true, true)
+								.delay(100).fadeOut(200);
+					}
+				}
+			});
+
+	$('.subOpen').click(
+			function() {
+				if ($(window).width() < 767) {
+					if ($(this).find('.subTemplateItems').is(':visible')) {
+						$(this).find('.subTemplateItems').stop(true, true)
+								.delay(100).fadeOut(200);
+					} else {
+						$(this).find('.subTemplateItems').stop(true, true)
+								.delay(100).fadeIn(200);
+					}
+				}
+			});
+
+	window.addEventListener('resize', checkLink);
+	window.addEventListener('resize', resizeTemplateList);
+	var path = window.location.pathname;
+	var hyper = true;
+	$(document).ready(function() {
+		checkLink();
+		resizeTemplateList();
+	});
+
+	function resizeTemplateList() {
+		if (window.innerWidth > 1800) {
+			var width = window.innerWidth * 0.5;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+		} else if (window.innerWidth > 1600) {
+			var width = window.innerWidth * 0.55;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+		} else if (window.innerWidth > 1380) {
+			var width = window.innerWidth * 0.6;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+		} else if (window.innerWidth > 1300) {
+			var width = window.innerWidth * 0.65;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+		} else if (window.innerWidth > 1240) {
+			var width = window.innerWidth * 0.7;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+		} else if (window.innerWidth > 1140) {
+			var width = window.innerWidth * 0.75;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+		} else if (window.innerWidth > 767) {
+			var width = window.innerWidth * 0.8;
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = width
+					+ 'px';
+			hyper = true;
+		} else {
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.width = '100%';
+			hyper = false;
+		}
+		if (window.innerWidth > 767) {
+			transformCal(width);
+		} else {
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.transform = null;
+		}
+	}
+
+	function transformCal(width) {
+		var menuWidth = width;
+		var rect = document.getElementsByClassName('dropdown-templates')[0]
+				.getBoundingClientRect().left;
+		var listWidth = document.getElementsByClassName('dropdown-templates')[0].offsetWidth;
+		var half = window.innerWidth / 2;
+		var checkMain = document.getElementById('main-index-header');
+		if (window.innerWidth > 1300) {
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.transform = "translate(-70%)";
+		} else {
+			if (half < rect) {
+				var distance = half - (rect + (listWidth / 2));
+			} else {
+				var distance = half - rect;
+			}
+			var halfMenu = menuWidth / 2;
+			if (checkMain != null) {
+				var width = distance - halfMenu;
+			} else {
+				var width = distance - halfMenu + (listWidth / 2);
+			}
+			document.getElementsByClassName('dropdown-templates-menu')[0].style.transform = "translate("
+					+ width + "px)";
+		}
+	}
+
+	function checkLink() {
+		if (window.innerWidth > 767 && hyper == false) {
+			enableLink();
+			var subItems = document.getElementsByClassName('subTemplateItems');
+			for (var i = 0; i < subItems.length; i++) {
+				subItems[i].style.display = 'block';
+			}
+			var header = document
+					.getElementsByClassName('templates-menu-category-header');
+			for (var i = 0; i < header.length; i++) {
+				if (header[i].textContent == 'Productivity'
+						|| header[i].textContent == 'Collage') {
+					if (header[i].classList.contains('items')) {
+						header[i].classList.remove('items');
+					}
+				}
+			}
+		} else if (window.innerWidth < 767 && hyper == true) {
+			disableLink();
+			var subItems = document.getElementsByClassName('subTemplateItems');
+			for (var i = 0; i < subItems.length; i++) {
+				subItems[i].style.display = 'none';
+			}
+			var header = document
+					.getElementsByClassName('templates-menu-category-header');
+			for (var i = 0; i < header.length; i++) {
+				if (header[i].classList.contains('items') == false) {
+					header[i].classList.add('items');
+				}
+			}
+		}
+	}
+
+	function disableLink() {
+		var hyper = document.getElementsByClassName('template-cateogry-link');
+		for (var i = 0; i < hyper.length; i++) {
+			var link = hyper[i].getAttribute('href');
+			if (link != null) {
+				hyper[i].setAttribute('data-href', link);
+				hyper[i].setAttribute('href', '#');
+			}
+		}
+	}
+
+	function enableLink() {
+		var hyper = document.getElementsByClassName('template-cateogry-link');
+		for (var i = 0; i < hyper.length; i++) {
+			var link = hyper[i].getAttribute('data-href');
+			if (link != null) {
+				hyper[i].removeAttribute('data-href');
+				hyper[i].setAttribute('href', link);
+			}
+		}
+	}
+</script><li><a href="https://online.visual-paradigm.com/pl/pricing/">Wycena</a></li>
+
+						<li class="btn-trial"><a href="https://online.visual-paradigm.com/pl/subscribe.jsp?t=diagrams">Zarejestruj się</a></li>
+						<li class="btn-login"><a href="https://online.visual-paradigm.com/pl/login.jsp?t=diagrams">Logowanie</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe select-language" aria-hidden="true"></i> <span class="caret"></span></a>
+							<ul id="lang-switcher" class="dropdown-menu">
+								<li><a href="https://online.visual-paradigm.com/diagrams/solutions/free-online-diagram-editor/" data-locale="en">English</a></li>
+<li><a href="https://online.visual-paradigm.com/cn/diagrams/solutions/free-online-diagram-editor/" data-locale="zh_CN">简体中文</a></li>
+<li><a href="https://online.visual-paradigm.com/tw/diagrams/solutions/free-online-diagram-editor/" data-locale="zh_TW">繁體中文</a></li>
+<li><a href="https://online.visual-paradigm.com/es/diagrams/solutions/free-online-diagram-editor/" data-locale="es">Español</a></li>
+<li><a href="https://online.visual-paradigm.com/de/diagrams/solutions/free-online-diagram-editor/" data-locale="de">Deutsch</a></li>
+<li><a href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-online-diagram-editor/" data-locale="pl">Polski</a></li>
+<li><a href="https://online.visual-paradigm.com/pt/diagrams/solutions/free-online-diagram-editor/" data-locale="pt">Português</a></li>
+<li><a href="https://online.visual-paradigm.com/id/diagrams/solutions/free-online-diagram-editor/" data-locale="in_ID">Bahasa Indonesia</a></li>
+<li><a href="https://online.visual-paradigm.com/ja/diagrams/solutions/free-online-diagram-editor/" data-locale="ja">日本語</a></li>
+<li><a href="https://online.visual-paradigm.com/ko/diagrams/solutions/free-online-diagram-editor/" data-locale="ko">한국인</a></li>
+<li><a href="https://online.visual-paradigm.com/ru/diagrams/solutions/free-online-diagram-editor/" data-locale="ru">Русский</a></li></ul> <script type="text/javascript">
+								$(document).ready(function() {
+									$("#lang-switcher a").on('click', function() {
+										setCookie("locale-selected", true);
+										setCookie("locale", $(this).data("locale"));
+									});
+									var memberPage = getCookie("memberPage");
+									if (memberPage) {
+										$("#my-workspace").attr("href",	'/'	+ memberPage);
+									}
+								});
+							</script></li>
+					</ul>
+				
+				<!-- mobile menu -->
+	
+				</div>
+			</div>
+		</nav>
+</nav>
+</div>
+ <script>
+    $(document).ready(function() {
+        $(".mobile_menu").simpleMobileMenu({
+            "menuStyle": "slide"
+        });
+    })
+    </script>
+<script>
+$("#product-megamenu").hover(
+		  function(){ // Mouse Over
+		   	var menu = $(this).find('.dropdown-menu').stop(true, true);
+			$("#mainNav").parent().addClass("megamenu");
+			menu.delay(100)
+					.fadeIn(200);
+		  },
+		  function(){ // Mouse Out
+		  	$(this).find('.dropdown-menu').stop(true, true).delay(100)
+				.fadeOut(100, 'swing', () => { // test 200
+					$("#mainNav").parent().removeClass("megamenu");
+				});
+		  }
+		);
+</script>
+<script>
+	$('ul.nav li.dropdown:not(#product-megamenu)').on(
+			{
+				mouseenter : function() {
+					$(this).find('.dropdown-menu').stop(true, true).delay(100)
+							.fadeIn(200);
+				},
+				mouseleave : function() {
+					$(this).find('.dropdown-menu').stop(true, true).delay(100)
+							.fadeOut(200);
+				}
+			});
+	
+	$('ul.nav li.dropdown-templates').on(
+			{
+				mouseenter : function() {
+					$(this).find('.dropdown-templates-menu').css('visibility','visible').stop(true, true).delay(100).fadeIn(200);
+				},
+				mouseleave : function() {
+					$(this).find('.dropdown-templates-menu').css('visibility','hidden').stop(true, true).delay(100).fadeOut(200);
+				}
+			});
+
+		$('.dropdown-toggle').click(
+			function() {
+				if ($(this).parent().find('.dropdown-templates-menu').is(':visible')) {
+					$(this).parent().find('.dropdown-templates-menu').stop(true, true).css('visibility','hidden').delay(100).fadeOut(200);
+				} else {
+					$(this).parent().find('.dropdown-templates-menu').css('visibility','visible').stop(true, true).delay(100).fadeIn(200);
+				}
+		});
+</script>
+
+<!--/ Navigation bar--><!--/ Navigation bar--><div class="breadcrumb-container">
+		<div class="container">
+			<div class="row">
+			<nav aria-label="breadcrumb" role="navigation">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="https://online.visual-paradigm.com/pl/"><i class="fa fa-home" aria-hidden="true"></i> </a></li>
+					<li class="breadcrumb-item"><a href="https://online.visual-paradigm.com/pl/free-tools/">Darmowe narzędzia</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Darmowy edytor schematów online</li>
+				</ol>
+			</nav>
+		</div>
+		</div>
+	</div>
+	<div class="solution-web-drawing-banner-overlay">
+		<div class="container text-center">
+			<div class="row">
+			<div class="col-md-12">
+				<div class="web-drawing-banner-heading ">
+					<h1>Darmowy edytor schematów online</h1>
+					<p>Twórz wyjątkowe darmowe diagramy UML, ERD, Org. Charts online. Całkowicie za darmo!</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<section class="features-section-padding">
+		<div class="container">
+	<div class="row">
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+				<div class="content-inner">
+					<h2 class="title" style="">Chcesz rysować UML, ERD i Org Chart online za darmo?</h2>
+					<p class="description">Visual Paradigm Online Free Edition to 
+darmowe i bogate w funkcje oprogramowanie do tworzenia diagramów online,
+ które oferuje zarówno podstawowe, jak i zaawansowane funkcje dla 
+różnych potrzeb wizualizacji. Umożliwia użytkownikom tworzenie 
+fantastycznych rysunków technicznych i biznesowych, takich jak UML, 
+diagram ER, schemat organizacyjny, plan piętra, diagram koncepcji 
+biznesowej itp. Oprócz tworzenia diagramów, VP Online pozwala stać się 
+biegłym twórcą diagramów za pomocą przykładów diagramów w aplikacjach. 
+Oprogramowanie działa w sieci i jest kompatybilne ze wszystkimi 
+przeglądarkami.</p>
+				</div>
+			</div>
+			<img class="fea-img-top" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/01-online-class-diagram-example.png" alt="Przykład diagramu klas">
+		</div>
+		<div class="row" style="text-align: center;">
+			<div class="col-lg-4 col-lg-offset-4">
+				<div class="try-it-now-btn">
+					<a href="https://online.visual-paradigm.com/diagrams.jsp" class="general-btn" target="_blank">Open the Diagram Editor</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<hr>
+
+	<section class="features-section-padding">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+				<div class="features-header">
+					<h2 class="title">Łatwe tworzenie pięknych diagramów</h2>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-sub-info">
+					<h3>Bezpłatne użytkowanie</h3>
+										<p>Draw free diagrams for personal purposes:</p>
+					<ul class="feature-sub-list">
+						<li>Unlimited no. of diagrams and shapes</li>
+						<li>Non-restricted accessing period</li>
+						<li>No watmerk in exported images</li>
+					</ul></div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-sub-info">
+					<h3>Szybkie tworzenie diagramów</h3>
+										<p>Create brilliant online diagrams with our intuitive online diagram editor. Highlighted features:</p>
+					<ul class="feature-sub-list">
+						<li>Drag and drop shape creation</li>
+						<li>Well attached connectors (no separate apart)</li>
+						<li>Several hundreds of diagram templates</li>
+					</ul></div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-sub-info">
+					<h3>Wszystko w jednym Diagrammer</h3>
+					<p>Dostęp do narzędzia do tworzenia diagramów ERD, narzędzia UML, 
+narzędzia do tworzenia schematów organizacyjnych, narzędzia do tworzenia
+ planów pięter, narzędzia do tworzenia map koncepcji biznesowych i 
+narzędzia do projektowania ITIL. Chcesz więcej diagramów? Możesz 
+uaktualnić do płatnej edycji, aby cieszyć się Flowchart, BPMN, 
+ArchiMate, Mind Map, DFD, Rack Diagram, SWOT, Value Chain w bardzo 
+przystępnej cenie.</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<hr>
+	<section class="features-section-padding">
+		<div class="features-header">
+			<h2 class="title">Kluczowe funkcje i korzyści</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+			<div class="col-md-5 col-sm-6 col-xs-12">
+				<div class="feature-images-top-pad">
+					<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/benefits.webp" alt="Kluczowe funkcje i korzyści">
+				</div>
+			</div>
+			<div class="col-md-7 col-sm-6 col-xs-12">
+				<div class="feature-images-top-pad">
+					<ul class="list-circle">
+						<li><strong>Nieograniczony okres dostępu</strong></li>
+						<li><strong>Nieograniczona liczba diagramów</strong></li>
+						<li><strong>Nieograniczona liczba kształtów</strong></li>
+						<li>Narzędzie UML, narzędzie ERD, kreator schematów organizacyjnych, projektant planów pięter, diagram koncepcji biznesowej, ITIL</li>
+						<li>Możliwość uaktualnienia do płatnych wersji dla <a href="https://online.visual-paradigm.com/pl/pricing/">większej liczby typów diagramów</a> i funkcji</li>
+						<li>Działa na wszystkich systemach operacyjnych (Windows, Mac, Linux) i jest kompatybilny ze wszystkimi przeglądarkami internetowymi</li>
+						<li>Łatwy w użyciu: Tworzenie i łączenie kształtów metodą 
+"przeciągnij i upuść". Łączniki są zawsze dołączone do kształtów i nigdy
+ się nie rozdzielają.</li>
+						<li>Zastosuj różne opcje formatowania (kształt i linie, farba 
+jednolita i gradientowa), ponad 40 typów złączy, podpis RTF, opcje 
+czcionki, efekt cienia itp.</li>
+						<li>Zbuduj własną bibliotekę kształtów, aby tworzyć diagramy z własnymi kształtami.</li>
+						<li>Łatwe dodawanie tekstu, notatek, obrazów zewnętrznych, linków internetowych do diagramu</li>
+						<li>Drukowanie i eksportowanie do różnych formatów (PNG, JPG, SVG, GIF, PDF)</li>
+						<li>Setki przykładów diagramów startowych i szablonów diagramów</li>
+						<li>Zapisywanie rysunków na Dysku Google</li>
+						<li>Import rysunków i szablonów Visio</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<hr>
+	<section class="features-section-padding">
+		<div class="features-header">
+			<h2 class="title">Ale nie wierz nam na słowo</h2>
+			<p class="solution-description">Wypróbuj sam. Wystarczy przejrzeć 
+poniższe przykłady diagramów i kliknąć Otwórz diagram, aby je otworzyć i
+ edytować. Przekonasz się, że jest to wszystko, o czym mówimy, a może 
+nawet więcej.</p>
+		</div>
+
+
+		<div class="index-slider-container">
+
+			<div class="container">
+				<div class="row">
+				<div class="col-md-3 col-lg-3 col-sm-3 hidden-sm hidden-xs">
+					<ul class="slider-features-list">
+						<li class="menu-item"><a class="active">Diagram klas</a></li>
+						<li class="menu-item"><a>Diagram przypadków użycia</a></li>
+						<li class="menu-item"><a>Diagram sekwencji</a></li>
+						<li class="menu-item"><a>Diagram aktywności</a></li>
+						<li class="menu-item"><a>Diagram wdrożenia</a></li>
+						<li class="menu-item"><a>Diagram komponentów</a></li>
+						<li class="menu-item"><a>Diagram maszyny stanów</a></li>
+						<li class="menu-item"><a>Diagram pakietów</a></li>
+						<li class="menu-item"><a>Diagram ER (ERD)</a></li>
+						<li class="menu-item"><a>Schemat organizacyjny</a></li>
+						<li class="menu-item"><a>Plan piętra</a></li>
+						<li class="menu-item"><a>Diagram koncepcji biznesowej</a></li>
+						<li class="menu-item"><a>Diagram ITIL</a></li>
+
+					</ul>
+				</div>
+
+				<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+					<!-- Swiper -->
+
+					<div class="swiper-container swiper-container-horizontal swiper-container-wp8-horizontal">
+						<div class="swiper-wrapper" style="transform: translate3d(-878px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="12" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/itil-diagram.webp" alt="Diagram ITIL" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ITILDiagram&amp;gallery=/repository/591a456a-6359-4cfd-adce-6373a77ee33a.xml&amp;name=Service%20Desk%20Responsibilities" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram ITIL<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ITILDiagram&amp;gallery=/repository/591a456a-6359-4cfd-adce-6373a77ee33a.xml&amp;name=Service%20Desk%20Responsibilities" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+
+								</div>
+							</div>
+							<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img class="" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/class-diagram.webp" alt="Diagram klas" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ClassDiagram&amp;gallery=/repository/e3676c7c-2bb5-44a1-a600-4502fd09e99e.xml&amp;name=Car" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram klas<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ClassDiagram&amp;gallery=/repository/e3676c7c-2bb5-44a1-a600-4502fd09e99e.xml&amp;name=Car" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img class="" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/use-case-diagram.webp" alt="Diagram przypadków użycia" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=UseCaseDiagram&amp;gallery=/repository/b92c57a8-fe64-40ed-8d29-f990c60442ba.xml&amp;name=ATM" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram przypadków użycia<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=UseCaseDiagram&amp;gallery=/repository/b92c57a8-fe64-40ed-8d29-f990c60442ba.xml&amp;name=ATM" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="2" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img class="" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/sequence-diagram.webp" alt="Diagram sekwencji" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=SequenceDiagram&amp;gallery=/repository/bb1829c1-089f-46c9-b516-495ce23cb398.xml&amp;name=Buy%20Tickets" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram sekwencji<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=SequenceDiagram&amp;gallery=/repository/bb1829c1-089f-46c9-b516-495ce23cb398.xml&amp;name=Buy%20Tickets" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="3" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/activity-diagram.webp" alt="Diagram aktywności" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ActivityDiagram&amp;gallery=/repository/02bae359-f24c-47a0-87b7-2e9dedf4aabc.xml&amp;name=Multidimensional%20Swimlanes" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram aktywności<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ActivityDiagram&amp;gallery=/repository/02bae359-f24c-47a0-87b7-2e9dedf4aabc.xml&amp;name=Multidimensional%20Swimlanes" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="4" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/deployment-diagram.webp" alt="Diagram wdrożenia" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=DeploymentDiagram&amp;gallery=/repository/be5d1c7f-5879-4942-b090-e3d9160b7f79.xml&amp;name=Mortgage%20Application" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram wdrożenia<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=DeploymentDiagram&amp;gallery=/repository/be5d1c7f-5879-4942-b090-e3d9160b7f79.xml&amp;name=Mortgage%20Application" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="5" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/component-diagram.webp" alt="Diagram komponentów" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ComponentDiagram&amp;gallery=/repository/a9491db3-e593-4c16-b0d8-b9c10d2cf59b.xml&amp;name=Store%20Component" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram komponentów<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ComponentDiagram&amp;gallery=/repository/a9491db3-e593-4c16-b0d8-b9c10d2cf59b.xml&amp;name=Store%20Component" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide" data-swiper-slide-index="6" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/state-machine-diagram.webp" alt="Diagram maszyny stanów" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=StateMachineDiagram&amp;gallery=/repository/a481a001-4075-47dc-b968-c8c191f88dad.xml&amp;name=Orthogonal%20State" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram maszyny stanów<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=StateMachineDiagram&amp;gallery=/repository/a481a001-4075-47dc-b968-c8c191f88dad.xml&amp;name=Orthogonal%20State" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="7" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/package-diagram.webp" alt="Diagram pakietów" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=PackageDiagram&amp;gallery=/repository/88031adf-45b4-4587-baf8-0a4b2af2f702.xml&amp;name=General%20Business%20System" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram pakietów<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=PackageDiagram&amp;gallery=/repository/88031adf-45b4-4587-baf8-0a4b2af2f702.xml&amp;name=General%20Business%20System" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="8" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/erd-diagram.webp" alt="Diagram ER (ERD)" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ERDiagram&amp;gallery=/repository/26696f29-1f6a-44a2-adb4-b03cff92e492.xml&amp;name=Inventory%20System" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram ER (ERD)<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ERDiagram&amp;gallery=/repository/26696f29-1f6a-44a2-adb4-b03cff92e492.xml&amp;name=Inventory%20System" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="9" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/organization-chart.webp" alt="Schemat organizacyjny" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=OrganizationChart&amp;gallery=/repository/328c510b-428a-4aff-997e-5892da45b20e.xml&amp;name=Sample%20Divisional%20Organizational%20Template" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Schemat organizacyjny<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=OrganizationChart&amp;gallery=/repository/328c510b-428a-4aff-997e-5892da45b20e.xml&amp;name=Sample%20Divisional%20Organizational%20Template" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="10" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/floor-plan.webp" alt="Plan piętra" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=FloorPlan&amp;gallery=/repository/4605071b-3b7a-4891-bdc5-43975736c2ab.xml&amp;name=Office%20Floor%20Plan" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Plan piętra<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=FloorPlan&amp;gallery=/repository/4605071b-3b7a-4891-bdc5-43975736c2ab.xml&amp;name=Office%20Floor%20Plan" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+
+								</div>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="11" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/business-concept.webp" alt="Diagram koncepcji biznesowej" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=BasicDiagram&amp;gallery=/repository/671bf122-f1bf-44ff-8f71-ca2012a50374.xml&amp;name=Helpdesk%20System" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											<span style="font-size: 0.7rem;">Diagram koncepcji biznesowej</span> <span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=BasicDiagram&amp;gallery=/repository/671bf122-f1bf-44ff-8f71-ca2012a50374.xml&amp;name=Helpdesk%20System" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+
+								</div>
+							</div>
+							<div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="12" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/itil-diagram.webp" alt="Diagram ITIL" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ITILDiagram&amp;gallery=/repository/591a456a-6359-4cfd-adce-6373a77ee33a.xml&amp;name=Service%20Desk%20Responsibilities" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram ITIL<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ITILDiagram&amp;gallery=/repository/591a456a-6359-4cfd-adce-6373a77ee33a.xml&amp;name=Service%20Desk%20Responsibilities" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+
+								</div>
+							</div>
+
+						<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 848px; margin-right: 30px;">
+								<div class="index-image-wrapper">
+									<img class="" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/class-diagram.webp" alt="Diagram klas" id="hover-content1">
+									<div class="index-image-wrapper-box">
+										<h1 class="ribbon hidden-sm hidden-xs">
+											<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ClassDiagram&amp;gallery=/repository/e3676c7c-2bb5-44a1-a600-4502fd09e99e.xml&amp;name=Car" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+										<h1 class="ribbon visible-sm visible-xs">
+											Diagram klas<span><a href="https://online.visual-paradigm.com/diagrams.jsp#diagram:type=ClassDiagram&amp;gallery=/repository/e3676c7c-2bb5-44a1-a600-4502fd09e99e.xml&amp;name=Car" class="feature-slider-btn">Otwórz diagram</a></span>
+
+										</h1>
+									</div>
+
+								</div>
+							</div></div>
+
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+</div>
+
+			</div>
+
+		</div>
+		<section class="other-solution-section-padding other-solution">
+		<div class="container">
+<div class="features-header">
+	<h2 class="title">Inne rozwiązania</h2>
+	</div>
+	<hr style="margin-bottom: 10px;">
+	<div class="centerlist">
+	<ul>
+		<li><a href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-online-uml-tool/">Free Online UML Tool</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-erd-editor/">Free ERD Editor</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-organization-chart-maker/">Free Organization Chart Maker</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-flowchart-editor-online/">Free Flowchart Editor Online</a></li>
+		</ul>
+	</div>
+</div>
+
+</section></section>
+
+	<div class="promo-space">
+		<div class="try-now-wrapper">
+			<div class="try-now-bg">
+				<div class="promo-now-message">
+					<h1>Start Drawing Your Free Diagram Today
+</h1>
+					<p>Bez ograniczeń, bez zobowiązań, bez opłat za anulowanie.</p>
+					<br> <a href="https://online.visual-paradigm.com/diagrams.jsp" class="top-try-btn">Rozpocznij</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--footer-->
+	<section id="footer">
+		<footer class="footer">
+			<div class="container">
+
+				<div class="row">
+					<!-- row -->
+					<div class="col-lg-1 col-md-12">
+						<!-- widgets column left -->
+						<a class="logo" href="https://online.visual-paradigm.com/pl/"><img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/vp-online-sm-white.webp" alt="Visual Paradigm" width="43px" height="52px"></a>
+
+							</div>
+
+					<!-- widgets column left end -->
+					<div class="footer-height0 col-lg-2 col-md-2 col-sm-3 col-xs-6">
+							<h4>Produkt</h4>
+						<ul class="footer-links">
+							<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/">Pakiet narzędzi PDF</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/">Flipbook Maker</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/diagrams/">Kreator diagramów</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/infoart/">Narzędzie do projektowania graficznego</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/document-editor/">Edytor dokumentów</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/presentation-software/">Kreator prezentacji</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/spreadsheet-editor/">Edytor arkuszy kalkulacyjnych</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/pricing/">Ceny</a></li>
+
+									</ul>
+						<div class="space-gap-sm"></div>
+				</div>
+				<div class="footer-height1 col-lg-2 col-md-2 col-sm-3 col-xs-6">
+							<h4>Zasoby</h4>
+						<ul class="footer-links">
+							<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/library/">Książka / Pokaz slajdów</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/community/">Projekt / Diagram</a></li>
+
+									<li><a href="https://forums.visual-paradigm.com/">Forum</a></li>
+									<li><a href="https://online.visual-paradigm.com/pl/learn/">Nauka</a></li>
+
+									<li><a href="https://blog.visual-paradigm.com/">Blog</a></li>
+									<li><a href="https://online.visual-paradigm.com/pl/knowledge/">Wiedza</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/free-tools/">Darmowe narzędzia</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/sitemap/">Mapa witryny</a></li>
+
+									</ul>
+						<div class="space-gap-sm"></div>
+				</div>
+				<div class="footer-height2 col-lg-2 col-md-2 col-sm-3 col-xs-6">
+							<h4>Firma</h4>
+						<ul class="footer-links">
+							<li><a href="https://online.visual-paradigm.com/pl/about-us/">O nas</a></li>
+
+									<li><a href="https://whats-new.visual-paradigm.com/">Co nowego</a></li>
+									<li><a href="https://online.visual-paradigm.com/pl/about-us/press-kit/">Zestaw prasowy</a></li>
+
+									<li><a href="https://online.visual-paradigm.com/pl/contact/">Kontakt</a></li>
+
+									</ul>
+						<div class="space-gap-sm"></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+
+					<!-- widgets column center -->
+					<h4>Prawny</h4>
+					<ul class="footer-links">
+						<li><a href="https://online.visual-paradigm.com/pl/terms.jsp">Warunki korzystania z usługi</a></li>
+						<li><a href="https://online.visual-paradigm.com/pl/privacy.jsp">Polityka prywatności</a></li>
+						<li><a href="https://online.visual-paradigm.com/pl/security.jsp">Przegląd zabezpieczeń</a></li>
+						<li><a href="https://online.visual-paradigm.com/pl/report-abuse.jsp">Zgłoś nadużycie</a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div class="space-gap-sm hidden-md hidden-lg"></div>
+					<!-- widgets column center -->
+					<h4>Znajdź nas na</h4>
+					<ul class="social-icons">
+						<li><a href="https://twitter.com/visualparadigm" class="social-icon"> <span class="x-twitter-footer"><img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/x-logo.svg" class="x-twitter-logo" alt="X"></span></a></li>
+						<li><a href="https://www.facebook.com/Visual-Paradigm-822068561487170/" class="social-icon"> <i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/visual-paradigm" class="social-icon"> <i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href="https://www.pinterest.com/visualparadigm/" class="social-icon"> <i class="fab fa-pinterest-p"></i></a></li>
+						<li><a href="https://www.youtube.com/user/VisualParadigm" class="social-icon footer-yt-wrap"><img class="footer-yt-icon" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/yt_icon_mono_white.webp"></a></li>
+						<li><a href="https://www.instagram.com/visualparadigm" class="social-icon"> <i class="fab fa-instagram"></i></a></li>
+					</ul>
+					<div class="space-gap-sm"></div>
+					<h4>Polecane produkty</h4>
+					<ul class="footer-links">
+					<li><a class="logo footer-links-featured-product" href="https://online.visual-paradigm.com/pl/"><img class="featured-image" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/vp-online-sm-white.webp" alt="Visual Paradigm Online" width="29px" height="35"><span>Visual Paradigm Online</span></a></li>
+						<li><a class="logo footer-links-featured-product" href="https://board.visual-paradigm.com/pl/"><img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/footer-sb-white-logo.webp" alt="Visual Paradigm Smart Board" width="30px" height="30"><span>Visual Paradigm Smart Board</span></a></li>
+						
+						<li><a class="logo footer-links-featured-product" href="https://www.visual-paradigm.com/" target="_blank"><img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/visual-paradigm-white-sm.webp" alt="Visual Paradigm Desktop" width="29px" height="35"><span>Visual Paradigm Desktop</span></a></li>
+
+							</ul>
+				</div>
+
+			</div>
+			</div>
+		</footer>
+		<!--header-->
+
+		<div class="footer-bottom">
+			<div class="social-container">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<ul class="menu social-text float-left">
+									<li><p>
+											©2024
+											by Visual Paradigm. Wszelkie prawa zastrzeżone.</p></li>
+									<li><a href="https://online.visual-paradigm.com/pl/terms.jsp">Warunki korzystania z usługi</a></li>
+									<li><a href="https://online.visual-paradigm.com/pl/privacy.jsp">Polityka prywatności</a></li>
+									<li><a href="https://online.visual-paradigm.com/pl/security.jsp">Przegląd zabezpieczeń</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+								<div class="design"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ Footer-->
+<script>
+	$('body')
+			.append(
+					'<div id="backToTop" class="btn btn-lg"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>');
+	$(window).on('scroll', function() {
+		if ($(this).scrollTop() <= 200) {
+			$('#backToTop').fadeOut();
+		} else {
+			$('#backToTop').fadeIn();
+		}
+	});
+	$('#backToTop').on('click', function() {
+		$("html, body").animate({
+			scrollTop : 0
+		}, 700);
+		return false;
+	});
+</script><div id="backToTop" class="btn btn-lg" style="display: block;"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+<script src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/visible.js"></script>
+<script src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/cookieconsent.css" rel="preload" as="style">
+<link href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/cookieconsent.js" rel="preload" as="script">
+
+<link rel="stylesheet" type="text/css" href="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/cookieconsent.css">
+<script type="text/javascript" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/cookieconsent.js"></script>
+
+<script>
+(function(){
+	if (!window.initCookieConsent) {
+		return;
+	}
+	var cookieConsentText = 'Używamy plików cookie, aby zapewnić lepsze wrażenia. Odwiedzając naszą witrynę, wyrażasz zgodę na używanie plików cookie zgodnie z naszą <a href="/pl/cookie-policy.jsp" target="_blank">Polityką plików cookie</a>.';
+	var cc = initCookieConsent();
+	var expires = new Date(new Date().getTime() + (1000*60*60*24 *3560));
+	cc.run({
+		current_lang:'en',
+		cookie_name: 'cookieConsentOK',
+		cookie_domain: '.visual-paradigm.com',
+		cookie_expiration: expires,
+		gui_options: {
+	        consent_modal: {
+	            layout: 'box',                      // box,cloud,bar
+	            position: 'bottom left',           // bottom,middle,top + left,right,center
+	            transition: 'slide'                 // zoom,slide
+	        }
+	    },
+	    languages: {
+	        'en': {
+	            consent_modal: {
+	                description: cookieConsentText,
+	                primary_btn: {
+	                    text: 'OK',
+	                    role: 'ok'              // 'accept_selected' or 'accept_all'
+	                }
+	            },
+	            settings_modal: {
+	                blocks: []
+	            }
+	        }
+	    }
+	});
+})();
+</script><div id="cc--main" style="position: fixed; z-index: 1000000;" class="c--anim"><!--[if lt IE 9 ]><div id="cc_div" class="cc_div ie"></div><![endif]--><!--[if (gt IE 8)|!(IE)]><!--><div id="cc_div" class="cc_div"><div id="s-cnt" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="s-ttl" style="visibility: hidden;"><div id="c-vln"><div id="cs"><div id="c-s-in"><div id="s-inr"><div id="s-hdr"><div id="s-ttl" role="heading">undefined</div><div id="s-c-bnc"><button type="button" id="s-c-bn" class="c-bn" aria-label="Close"></button></div></div><div id="s-bl"></div><div id="s-bns"><button type="button" id="s-all-bn" class="c-bn"></button><button type="button" id="s-sv-bn" class="c-bn"></button></div></div></div></div></div></div><div id="cs-ov" style="visibility: hidden; opacity: 0;"></div></div><!--<![endif]--></div>
+<script async="" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/google-analytics_analytics.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BTMXEBRT87');
+</script>
+<script>
+		$(document)
+				.ready(
+						function() {
+							var swiper = new Swiper('.swiper-container', {
+								slidesPerView : 1,
+								centeredSlides : true,
+								spaceBetween : 30,
+								loop : true,
+								navigation : {
+									nextEl : '.swiper-button-next',
+									prevEl : '.swiper-button-prev',
+								},
+							});
+							var slideItemCount = $(".slider-features-list .menu-item a").length;
+							swiper
+									.on(
+											'slideChange',
+											function() {
+												$(
+														".slider-features-list .menu-item a")
+														.removeClass("active");
+												var nextIndex = swiper.activeIndex - 1;
+												if (nextIndex < 0) {
+													nextIndex = slideItemCount - 1;
+												} else if (nextIndex >= slideItemCount) {
+													nextIndex = 0;
+												}
+												$(
+														$(".slider-features-list .menu-item a")[nextIndex])
+														.addClass("active");
+											});
+							$(".slider-features-list .menu-item a")
+									.each(
+											function(idx, elem) {
+												$(elem)
+														.on(
+																'click',
+																function(e) {
+																	e
+																			.preventDefault();
+																	var newIndex = idx + 1;
+																	if (newIndex >= slideItemCount) {
+																		newIndex = 0;
+																	}
+																	swiper
+																			.slideTo(
+																					newIndex,
+																					0);
+																	$(
+																			".slider-features-list .menu-item a")
+																			.removeClass(
+																					"active");
+																	$(this)
+																			.addClass(
+																					"active");
+																});
+											});
+							$(".slider-features-list .menu-item a:first")
+									.addClass("active");
+						});
+	</script>
+
+	<script type="text/javascript" src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/swiper-4.1.0.min.js"></script>
+
+
+
+<div id="sm_menu_ham"><span></span><span></span><span></span><span></span></div><div class="sm_menu_outer slide"><ul class="mobile_menu">
+		<!-- Product -->
+<!-- Resources -->
+<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Eksploruj<span class="badge badge-new-v1">Nowość</span></a>
+	<ul class="submenu"><li class="back"><a href="#">Eksploruj<span class="badge badge-new-v1">Nowość</span></a></li>
+		<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Featured</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Featured</a></li>
+				
+				<li style="cursor: pointer"><a href="https://www.fliplify.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Flipbook Maker</span>
+                 <p class="">Design online Ebook and slideshow with Fliplify</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://www.anifuzion.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/anifuzion-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Animation Maker</span>
+                 <p class="">Create 2D and 3D animations with AniFuzion.</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PPT Viewer</span>
+                 <p class="">Convert PPT to online slideshow viewer</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PDF Editor</span>
+                 <p class="">Lightweight PDF editor, tools and converters</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/infoart/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/designer-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Graphic Designer</span>
+                 <p class="">Professional visual creations</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/diagrams/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagram-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Diagram Maker</span>
+                 <p class="">Make flowchart, software, business diagrams</p>
+            </div>
+        </div>
+				</a></li>
+			
+
+			<li><a href="https://online.visual-paradigm.com/pl/online-office/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Office Editors</span>
+                 <p class="">Create / edit Word, Spreadsheet &amp; PPT</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/charts/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/chart-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Chart Maker</span>
+                 <p class="">Visualize data effortlessly</p>
+            </div>
+        </div>
+				</a></li>
+				
+			</ul></li>
+			
+			<!-- digital publication -->
+			<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Digital Publication</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Digital Publication</a></li>
+				
+				<li style="cursor: pointer"><a href="https://www.fliplify.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Flipbook Maker</span>
+                 <p class="">Design online Ebook and slideshow with Fliplify</p>
+            </div>
+        </div>
+				</a></li>
+				
+				
+				<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PDF Editor</span>
+                 <p class="">Lightweight PDF editor, tools and converters</p>
+            </div>
+        </div>
+				</a></li>
+			<li><a href="https://online.visual-paradigm.com/pl/online-office/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Office Editors</span>
+                 <p class="">Create / edit Word, Spreadsheet &amp; PPT</p>
+            </div>
+        </div>
+				</a></li>
+				
+			<li><a href="https://online.visual-paradigm.com/pl/file-converters/file-conversion-tools/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/files-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">File Converters</span>
+                 <p class="">Convert files with ease</p>
+            </div>
+        </div>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PPT Viewer</span>
+                 <p class="">Convert PPT to online slideshow viewer</p>
+            </div>
+        </div>
+				</a></li>
+			</ul></li>
+				<!-- animation maker -->
+				<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Animation Maker</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Animation Maker</a></li>
+				
+				<li style="cursor: pointer"><a href="https://www.fliplify.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Flipbook Maker</span>
+                 <p class="">Design online Ebook and slideshow with Fliplify</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://www.anifuzion.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/anifuzion-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Animation Maker</span>
+                 <p class="">Create 2D and 3D animations with AniFuzion.</p>
+            </div>
+        </div>
+				</a></li>
+
+			</ul></li>
+			
+			<!-- Graphic Designer -->
+				<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Graphic Designer</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Graphic Designer</a></li>
+				
+			<li><a href="https://online.visual-paradigm.com/pl/infoart/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/designer-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Graphic Designer</span>
+                 <p class="">Professional visual creations</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/photo-effects-studio/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/photo-effects-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Photo Effect Tools</span>
+                 <p class="">Enhance images creatively</p>
+            </div>
+        </div>
+				</a></li>
+				
+				<li><a href="https://online.visual-paradigm.com/pl/charts/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/chart-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Chart Maker</span>
+                 <p class="">Visualize data effortlessly</p>
+            </div>
+        </div>
+				</a></li>
+				<li style="cursor: pointer"><a href="https://www.fliplify.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Flipbook Maker</span>
+                 <p class="">Design online Ebook and slideshow with Fliplify</p>
+            </div>
+        </div>
+				</a></li>
+
+			</ul></li>
+			
+			<!-- Diagramming -->
+				<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Diagramming</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Diagramming</a></li>
+				
+				<li><a href="https://online.visual-paradigm.com/pl/diagrams/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagram-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Diagram Maker</span>
+                 <p class="">Make flowchart, software, business diagrams</p>
+            </div>
+        </div>
+				</a></li>
+
+			</ul></li>
+			<!-- Doc Editing -->
+				<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Document Editing</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Document Editing</a></li>
+				
+					<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PDF Editor</span>
+                 <p class="">Lightweight PDF editor, tools and converters</p>
+            </div>
+        </div>
+				</a></li>
+					<li><a href="https://online.visual-paradigm.com/pl/file-converters/file-conversion-tools/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/files-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">File Converters</span>
+                 <p class="">Convert files with ease</p>
+            </div>
+        </div>
+				</a></li>
+					<li><a href="https://online.visual-paradigm.com/pl/online-office/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Office Editors</span>
+                 <p class="">Create / edit Word, Spreadsheet &amp; PPT</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PPT Viewer</span>
+                 <p class="">Convert PPT to online slideshow viewer</p>
+            </div>
+        </div>
+				</a></li>
+
+			</ul></li>
+			
+			<!-- All Tools -->
+				<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">All Tools</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">All Tools</a></li>
+				
+					<li style="cursor: pointer"><a href="https://www.fliplify.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/fliplify-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Flipbook Maker</span>
+                 <p class="">Design online Ebook and slideshow with Fliplify</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://www.anifuzion.com/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/anifuzion-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Animation Maker</span>
+                 <p class="">Create 2D and 3D animations with AniFuzion.</p>
+            </div>
+        </div>
+				</a></li>
+			<li><a href="https://online.visual-paradigm.com/pl/powerpoint-web-viewer/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/ppt-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PPT Viewer</span>
+                 <p class="">Convert PPT to online slideshow viewer</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/online-pdf-editor/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/pdf-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">PDF Editor</span>
+                 <p class="">Lightweight PDF editor, tools and converters</p>
+            </div>
+        </div>
+				</a></li>
+<li><a href="https://online.visual-paradigm.com/pl/diagrams/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/diagram-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Diagram Maker</span>
+                 <p class="">Make flowchart, software, business diagrams</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/infoart/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/designer-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Graphic Designer</span>
+                 <p class="">Professional visual creations</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/online-office/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/doc-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Office Editors</span>
+                 <p class="">Create / edit Word, Spreadsheet &amp; PPT</p>
+            </div>
+        </div>
+				</a></li>
+					<li><a href="https://online.visual-paradigm.com/pl/charts/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/chart-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Chart Maker</span>
+                 <p class="">Visualize data effortlessly</p>
+            </div>
+        </div>
+				</a></li>
+					<li><a href="https://online.visual-paradigm.com/pl/forms/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/form-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Form Builder</span>
+                 <p class="">Simplify form creation</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/file-converters/file-conversion-tools/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/files-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">File Converters</span>
+                 <p class="">Convert files with ease</p>
+            </div>
+        </div>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/photo-effects-studio/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/photo-effects-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Photo Effect Tools</span>
+                 <p class="">Enhance images creatively</p>
+            </div>
+        </div>
+				</a></li>
+				
+			</ul></li>
+<!-- Doc Editing -->
+				<li class="hasChild"><a style="cursor: pointer;" href="#" onclick="return false;">Other Products</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Other Products</a></li>
+				
+					<li><a href="https://www.visual-paradigm.com/" target="_blank" data-locale="en">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/vp-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Visual Paradigm Desktop</span>
+                 <p class="">IT project and transformation tools</p>
+            </div>
+        </div>
+				</a></li>
+					<li><a href="https://online.visual-paradigm.com/pl/board/" data-locale="en" target="_blank">
+						<div class="tool-explore-wrap">
+            <div class="product-dropdown-menu"> <img src="Darmowy%20edytor%20diagram%C3%B3w%20online_pliki/smartboard-logo.webp"> </div>
+           
+            <div class="tool-title-explore">
+            <span class="logo-product-title">Smart Board</span>
+                 <p class="">Smart Board</p>
+            </div>
+        </div>
+				</a></li>
+					
+
+			</ul></li>
+
+	</ul></li>
+
+
+
+
+<!-- Feature -->
+<li><a href="https://online.visual-paradigm.com/features/">Funkcje</a></li>
+
+<!-- Resources -->
+<li class="hasChild"><a style="cursor: pointer;">Zasoby</a>
+	<ul class="submenu"><li class="back"><a href="#">Zasoby</a></li>
+		<li class="hasChild"><a style="cursor: pointer;">Kreacje społecznościowe</a>
+
+
+			<ul class="submenu"><li class="back"><a href="#">Kreacje społecznościowe</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/flipbook-maker/library/" data-locale="en"> <span class="">Książka / Pokaz slajdów</span>
+
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/pl/community/" data-locale="en"> <span class="">Projekt / schemat</span>
+
+				</a></li>
+			</ul></li>
+		<li><a href="https://whats-new.visual-paradigm.com/" data-locale="en"> <span class="">Co nowego</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/learn/" data-locale="en"> <span class="">Ucz się</span>
+
+		</a></li>
+		<li><a href="https://blog.visual-paradigm.com/" data-locale="en"> <span class="">Blog</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/knowledge/" data-locale="en"> <span class="">Wiedza</span>
+
+		</a></li>
+	</ul></li>
+
+
+<!-- Solutions -->
+<li class="hasChild"><a style="cursor: pointer;">Rozwiązania</a>
+	<ul class="submenu"><li class="back"><a href="#">Rozwiązania</a></li>
+
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/education/" data-locale="en"> <span class="">Edukacja</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/entertainment/" data-locale="en"> <span class="">Rozrywka</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/finance/" data-locale="en"> <span class="">Finanse</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/marketing/" data-locale="en"> <span class="">Marketing</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/medical/" data-locale="en"> <span class="">Medycyna</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/real-estate/" data-locale="en"> <span class="">Nieruchomości</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/retail/" data-locale="en"> <span class="">Handel detaliczny</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/startups/" data-locale="en"> <span class="">Startupy</span>
+
+		</a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/solutions/travel/" data-locale="en"> <span class="">Podróże</span>
+
+		</a></li>
+	</ul></li>
+
+
+
+<!-- Templates -->
+<li class="hasChild"><a style="cursor: pointer;">Szablony</a>
+	<ul class="submenu"><li class="back"><a href="#">Szablony</a></li>
+		<li class="hasChild"><a style="cursor: pointer;">Materiały wizualne</a>
+			<ul class="submenu"><li class="back"><a href="#">Materiały wizualne</a></li>
+				<li><a href="https://online.visual-paradigm.com/infoart/templates/brochures/"> <span class="items">Broszury</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/infoart/templates/greeting-cards/"> <span class="items">Kartki okolicznościowe</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/infoart/templates/infographics/"> <span class="items">Infografika</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/infoart/templates/instagram-posts/"> <span class="items">Posty na Instagramie</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/infoart/templates/invitations/"> <span class="items">Zaproszenia</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/infoart/templates/posters/"> <span class="items">Plakaty</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/infoart/templates"> <span class="items">Zobacz wszystkie</span>
+				</a></li>
+
+			</ul></li>
+
+		<li class="hasChild"><a style="cursor: pointer;">Diagramy</a>
+			<ul class="submenu"><li class="back"><a href="#">Diagramy</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/archimate-diagram/"> <span class="items">ArchiMate</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/?category=floor-plan"> <span class="items">Plan piętra</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/?category=flowchart"> <span class="items">Schemat blokowy</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/genogram/"> <span class="items">Genogram</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/mind-map-diagram/"> <span class="items">Mapa myśli</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/class-diagram/"> <span class="items">Diagramy klas UML</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates"> <span class="items">Zobacz wszystkie</span>
+				</a></li>
+
+			</ul></li>
+
+		<li class="hasChild"><a style="cursor: pointer;">Wykresy</a>
+			<ul class="submenu"><li class="back"><a href="#">Wykresy</a></li>
+				<li><a href="https://online.visual-paradigm.com/charts/templates/?category=bar"> <span class="items">Wykresy słupkowe</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/charts/templates/candlestick/"> <span class="items">Wykres świecowy</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/diagrams/templates/?category=flowchart"> <span class="items">Schemat blokowy</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/charts/templates/doughnut-charts/"> <span class="items">Wykresy pączkowe</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/charts/templates/?category=line"> <span class="items">Wykresy liniowe</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/charts/templates/?category=pie"> <span class="items">Wykresy kołowe</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/charts/templates/?category=radar"> <span class="items">Wykresy radarowe</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/charts/templates"> <span class="items">Wykresy radarowe</span>
+				</a></li>
+
+			</ul></li>
+		<li class="hasChild"><a style="cursor: pointer;">Flipbooki</a>
+			<ul class="submenu"><li class="back"><a href="#">Flipbooki</a></li>
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/booklets/"> <span class="items">Broszury</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/business-portfolios/"> <span class="items">Portfolio biznesowe</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/catalogs/"> <span class="items">Katalogi</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/lookbooks/"> <span class="items">Lookbooki</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/prospectuses/"> <span class="items">Prospekty</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/personal-portfolios/"> <span class="items">Portfele osobiste</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/flipbook-maker/templates/"> <span class="items">Zobacz wszystkie</span>
+				</a></li>
+
+			</ul></li>
+
+		<li class="hasChild"><a style="cursor: pointer;">Fotoksiążki</a>
+			<ul class="submenu"><li class="back"><a href="#">Fotoksiążki</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates/baby-photo-books/"> <span class="items">Fotoksiążki dla dzieci.</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates/everyday-photo-books/"> <span class="items">Fotoksiążki na co dzień.</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates/family-photo-books/"> <span class="items">Fotoksiążki rodzinne.</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates/pet-photo-books/"> <span class="items">Fotoksiążki ze zwierzętami.</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates/travel-photo-books/"> <span class="items">Fotoksiążki podróżnicze.</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates/wedding-photo-books/"> <span class="items">Fotoksiążki ślubne.</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-book-maker/templates"> <span class="items">Zobacz wszystkie</span>
+				</a></li>
+
+
+			</ul></li>
+
+		<li class="hasChild"><a style="cursor: pointer;">Kolaż</a>
+			<ul class="submenu"><li class="back"><a href="#">Kolaż</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-collage-maker/templates/photo-collages/"> <span class="items">Kolaże zdjęć</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-collage-maker/templates/mood-boards/"> <span class="items">Tablice nastrojów</span>
+				</a></li>
+				<li><a href="https://online.visual-paradigm.com/photo-collage-maker/templates/comic-strips/"> <span class="items">Paski komiksowe</span>
+				</a></li>
+
+				<li><a href="https://online.visual-paradigm.com/photo-collage-maker/templates"> <span class="items">Zobacz wszystkie</span>
+				</a></li>
+			</ul></li>
+		<li><a href="https://online.visual-paradigm.com/forms/templates/">Formularz</a></li>
+
+
+		<li><a href="https://online.visual-paradigm.com/spreadsheet-editor/templates/">Arkusze kalkulacyjne</a></li>
+
+	</ul></li>
+<!-- Pricing -->
+<li><a href="https://online.visual-paradigm.com/pricing/">Pricing</a></li>
+<li class="hasChild"><a style="cursor: pointer;"><i class="fa fa-globe select-language" aria-hidden="true"></i></a>
+	<ul class="submenu"><li class="back"><a href="#"><i class="fa fa-globe select-language" aria-hidden="true"></i></a></li>
+		<li><a href="https://online.visual-paradigm.com/diagrams/solutions/free-online-diagram-editor/" data-locale="en"> <span class="items">English</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/cn/diagrams/solutions/free-online-diagram-editor/" data-locale="zh_CN"> <span class="items">简体中文</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/tw/diagrams/solutions/free-online-diagram-editor/" data-locale="zh_TW"> <span class="items">繁體中文</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/es/diagrams/solutions/free-online-diagram-editor/" data-locale="es"><span class="items">Español</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/de/diagrams/solutions/free-online-diagram-editor/" data-locale="de"><span class="items">Deutsch</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/pl/diagrams/solutions/free-online-diagram-editor/" data-locale="pl"><span class="items">Polski</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/pt/diagrams/solutions/free-online-diagram-editor/" data-locale="pt"><span class="items">Português</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/id/diagrams/solutions/free-online-diagram-editor/" data-locale="in_ID"><span class="items">Bahasa Indonesia</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/ja/diagrams/solutions/free-online-diagram-editor/" data-locale="ja"><span class="items">日本語</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/ko/diagrams/solutions/free-online-diagram-editor/" data-locale="ko"><span class="items">한국인</span></a></li>
+		<li><a href="https://online.visual-paradigm.com/ru/diagrams/solutions/free-online-diagram-editor/" data-locale="ru"><span class="items">Русский</span></a></li>
+	</ul> <script type="text/javascript">
+								$(document).ready(function() {
+									$("#lang-switcher a").on('click', function() {
+										setCookie("locale-selected", true);
+										setCookie("locale", $(this).data("locale"));
+									});
+							var memberPage = getCookie("memberPage");
+							if (memberPage) {
+								$("#my-workspace").attr("href",
+										'/' + memberPage);
+							}
+						});
+	</script></li>
+
+<!-- Sign up -->
+<li><a class="submenu-signup" href="https://online.visual-paradigm.com/pl/subscribe.jsp?t=diagrams">Zarejestruj się</a></li>
+         
+         <!-- Pricing -->
+         <li><a class="submenu-login" href="https://online.visual-paradigm.com/pl/login.jsp?t=diagrams">Logowanie</a></li>
+        
+            
+       <!-- Form -->
+       
+    </ul></div></body></html>

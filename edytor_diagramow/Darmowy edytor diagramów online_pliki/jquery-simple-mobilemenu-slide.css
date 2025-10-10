@@ -1,0 +1,192 @@
+/*
+JQuery Simple MobileMenu Slide
+https://github.com/Position2/jQuery-Simple-MobileMenu
+*/
+/*Main style*/
+body.mmactive {
+  overflow: hidden;
+}
+.mobile_menu {
+  display: none;
+  position: relative;
+}
+.sm_menu_outer.active .mobile_menu {
+  display: block;
+   top: 10px;
+}
+.product-mobile-menu {
+	overflow: auto;
+}
+.sm_menu_outer {
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -9;
+  width: 100%;
+  opacity: 0;
+  background-color: #ffffff;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.sm_menu_outer.active {
+  opacity: 1;
+  z-index: 999;
+  background: rgba(255, 255, 255);
+
+}
+.sm_menu_outer .mobile_menu li.back a {
+  padding: 20px 5px 20px 55px;
+  background: url("/images/nav/back.png") no-repeat scroll 15px center / 5% auto;
+}
+.sm_menu_outer .mobile_menu a {
+  color: #212529;
+  display: block;
+ font-size: 14px;
+ font-weight: 600;
+  letter-spacing: 1px;
+  padding: 20px 15px;
+
+  text-decoration: none;
+}
+.submenu-login {
+    background-color: #4A564E;
+  
+    color: #ffffff !important;
+}
+.submenu-signup {
+	background-color: #4cd0e5;
+  
+    color: #ffffff !important;
+}
+/*Sub Menu anim */
+.sm_menu_outer.slide .mobile_menu .submenu {
+  background-color: #ffffff;
+
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  z-index: 999;
+  
+}
+.sm_menu_outer.slide .mobile_menu li.active > .submenu {
+  right: 0;
+}
+.sm_menu_outer .mobile_menu li {
+  list-style-type: none;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0);
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #b6b6b6 20%, #d0d0d0 50%, #b6b6b6 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+  color: #ffffff;
+}
+.sm_menu_outer.slide .mobile_menu li.hasChild > a {
+  background: url("/images/nav/next.png") no-repeat scroll 95% center / 5% auto;
+}
+/*Hamburger Animation */
+#sm_menu_ham {
+  cursor: pointer;
+  float: right;
+  height: 25px;
+  position: fixed;
+  right: 5px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  width: 30px;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+}
+#sm_menu_ham span {
+  background-color: #5a5a5a;
+  border-radius: 5px;
+  display: block;
+  height: 2px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  width: 30px;
+}
+#sm_menu_ham span:nth-child(1) {
+  top: 0;
+}
+#sm_menu_ham span:nth-child(2),
+#sm_menu_ham span:nth-child(3) {
+  top: 10px;
+}
+#sm_menu_ham span:nth-child(4) {
+  top: 20px;
+}
+#sm_menu_ham.open span:nth-child(1) {
+  left: 50%;
+  top: 18px;
+  width: 0;
+}
+#sm_menu_ham.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#sm_menu_ham.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#sm_menu_ham.open span:nth-child(4) {
+  left: 50%;
+  top: 18px;
+  width: 0;
+}
+@media (min-width: 767px) {
+  #sm_menu_ham,
+  .sm_menu_outer {
+    display: none;
+  }
+} 
+.mobile_menu .tool-explore-wrap p {
+	font-size: 14px;
+	margin-left: 7px;
+}
+.mobile_menu .tool-explore-wrap {
+	display: flex;
+	align-items: center;
+}
+.mobile_menu .product-dropdown-menu {
+	        width: auto !important;
+}
+.mobile_menu .product-dropdown-menu p {
+	width:50%;
+	font-size: 14px;
+	margin-bottom: 0px;
+	margin-top: 7px !important;
+    font-weight: 400 !important;
+}
+.mobile_menu .logo-product-title {
+    font-weight: 600;
+    color: #03a9f5;
+    margin-left: 7px;
+        font-size: 18px;
+    letter-spacing: -0.1px;
+}
+.mobile_menu .product-dropdown-menu p {
+    margin-left: 29px;
+    margin-top: 3px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    font-weight: 600;
+}

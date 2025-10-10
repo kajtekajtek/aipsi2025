@@ -1,0 +1,21 @@
+.crownContainer {
+  display: block;
+  background: rgba(17, 23, 29, 0.6);
+  border-radius: 9px;
+  height: 18px;
+  text-align: left;
+  transition: .2s;
+}
+
+.crownEdition {
+  color: white;
+  vertical-align: top;
+  overflow: hidden;
+  position: absolute;
+  font-size: 12px;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+  padding-left: 18px;
+  transition: .2s;
+}
