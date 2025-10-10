@@ -1,0 +1,35 @@
+
+INSERT INTO category (id, name)
+VALUES (1, 'Programowanie'),
+       (2, 'Inne'),
+       (3, 'Aplikacje biurowe'),
+       (4, 'Bazy danych'),
+       (5, 'Sieci i serwery'),
+       (6, 'Bezpieczeństwo'),
+       (7, 'Grafika komputerowa'),
+       (8, 'CAD/CAM'),
+       (9, 'Sprzęt');
+
+INSERT INTO publisher (name)
+VALUES ('O''Reilly Media'),
+       ('Manning Publications'),
+       ('Packt Publishing'),
+       ('No Starch Press'),
+       ('Apress'),
+       ('Wiley'),
+       ('McGraw-Hill'),
+       ('Pearson'),
+       ('Prentice Hall'),
+       ('Addison-Wesley'),
+       ('Sybex'),
+       ('Que'),
+       ('Sams'),
+       ('Microsoft Press'),
+       ('John Wiley & Sons'),
+       ('Wrox'),
+       ('Oxford University Press'),
+       ('Cambridge University Press'),
+       ('Elsevier'),
+       ('Springer'),
+       ('Taylor & Francis'),
+       ('Routledge');

@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/app?createDatabaseIfNotExist=true
+    username: bookstore
+    password: bookstore123
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+    properties:
+      hibernate.format_sql: true
+  sql:
+    init:
+      mode: embedded
+      platform: mariadb
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+
+application:
+  security:
+    jwt:
+      secret-key: 5d3e61b807f6c5ea1b69d142bc8a7f49a67cacf6c53d72a2a5a6f77c0870d635ee45a154caeddf2233565e98636d8ca1cd5077f7136f0905824abbea6f680a959009ae2f35e17cda7aff47f886f60210117e334d206c11d01f403f15d381cbe067201093deec162bec28b5dcf0f76d767c27179bfea705e099e2b19f636fdf3c53cef0501314fa497ba52c8784964eb03dd54ac8e3143362ea111722680fe5e220b96a6085ac64e90f02eca1615e40cd0bed364020f552e46cf5c355145de4e89a3117b72b1380e4b4640084ecc0902bcfe11fba968d78702d71cc35560dffad8520bd281b8dfd0cea4cbdba5cde4101e7c5bb6d945084e203c866e3eb4ea6ce
+      expiration: 900000
+      refresh-token:
+        expiration: 86400000
