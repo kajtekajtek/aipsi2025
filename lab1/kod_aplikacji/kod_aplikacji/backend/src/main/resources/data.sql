@@ -1,5 +1,5 @@
 
-INSERT INTO category (id, name)
+INSERT IGNORE INTO category (id, name)
 VALUES (1, 'Programowanie'),
        (2, 'Inne'),
        (3, 'Aplikacje biurowe'),
@@ -10,7 +10,7 @@ VALUES (1, 'Programowanie'),
        (8, 'CAD/CAM'),
        (9, 'Sprzęt');
 
-INSERT INTO publisher (name)
+INSERT IGNORE INTO publisher (name)
 VALUES ('O''Reilly Media'),
        ('Manning Publications'),
        ('Packt Publishing'),
