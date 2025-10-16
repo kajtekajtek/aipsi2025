@@ -14,7 +14,7 @@ spring:
       hibernate.format_sql: true
   sql:
     init:
-      mode: embedded
+      mode: always
       platform: mariadb
   jackson:
     serialization:
