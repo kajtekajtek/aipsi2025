@@ -120,7 +120,7 @@ public class NotificationService {
 
 
     public List<Notification> getUserNotifications(Long userId) {
-        return notificationRepository.findAllByRecipient_IdAndReadIsFalseOrderByTimeStampDesc(userId);
+        return notificationRepository.findAllByRecipient_IdAndIsReadIsFalseOrderByTimeStampDesc(userId);
     }
 
     public ResponseEntity<Notification> markNotificationAsRead(Long notificationId) {
@@ -134,7 +134,7 @@ public class NotificationService {
     }
 
     public ResponseEntity<List<Notification>> markAllNotificationsAsRead(Long userId) {
-        var notifications = notificationRepository.findAllByRecipient_IdAndReadIsFalseOrderByTimeStampDesc(userId);
+        var notifications = notificationRepository.findAllByRecipient_IdAndIsReadIsFalseOrderByTimeStampDesc(userId);
         notifications.forEach(notification -> notification.setRead(true));
         var savedNotifications = notificationRepository.saveAll(notifications);
         return ResponseEntity.ok(savedNotifications);
