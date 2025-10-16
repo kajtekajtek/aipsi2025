@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import java.text.NumberFormat;
 
 @SpringBootApplication
-@PropertySource("file:${user.dir}/backend/.env")
+@PropertySource("file:${user.dir}/.env")
 @EnableScheduling
 public class DemoApplication {
 
