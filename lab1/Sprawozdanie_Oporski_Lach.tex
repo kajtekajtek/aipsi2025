@@ -10,7 +10,7 @@
 
 \geometry{margin=2.5cm}
 
-\title{Planowanie procesu wdroenia produktu informatycznego za pomocą UML}
+\title{Planowanie procesu wdrożenia produktu informatycznego za pomocą UML}
 \author{Adam Oporski, Kajetan Lach}
 
 \begin{document}
@@ -24,6 +24,12 @@ Język UML (Unified Modeling Language) wykorzystuje zestaw graficznych elementó
 
 \subsection{Elementy strukturalne}
 Elementy strukturalne to "rzeczowniki" języka UML; opisują statyczną architekturę i części składowe systemu. Definiują one, z czego system jest zbudowany, niezależnie od tego, co robi w danym momencie. Do najważniejszych elementów strukturalnych należą:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/17-class-diagram-example-order-system.png}
+\end{figure}
+
 \begin{itemize}
 \item Klasa (Class): Szablon do tworzenia obiektów, opisujący ich wspólne atrybuty i operacje.
 \item Interfejs (Interface): Zbiór operacji, które klasa musi zaimplementować, definiujący "kontrakt" bez podawania implementacji.
@@ -41,8 +47,14 @@ Elementy behawioralne (zachowaniowe) to "czasowniki" języka UML; opisują dynam
 \item Przypadek użycia (Use Case): Opisuje sekwencję działań wykonywanych przez system, która przynosi wartość aktorowi (np. "Logowanie użytkownika").
 \end{itemize}
 
-\subsection{Elementy grupujące}
+\newpage\subsection{Elementy grupujące}
 Elementy grupujące to "pudełka" lub "foldery" w języku UML, służące do organizowania modelu. Nie reprezentują one bezpośrednio fizycznej ani logicznej części samego systemu (jak klasa czy komponent), ale pomagają zarządzać jego złożonością, dzieląc model na mniejsze, spójne części.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/02-simple-package-diagram-example.png}
+\end{figure}
+
 \begin{itemize}
 \item Pakiet (Package): To podstawowy i najważniejszy element grupujący. Działa jak katalog lub przestrzeń nazw (namespace), która może zawierać dowolne inne elementy UML (klasy, przypadki użycia, komponenty, a nawet inne pakiety).
 \item \begin{itemize}
@@ -57,8 +69,13 @@ Elementy grupujące to "pudełka" lub "foldery" w języku UML, służące do org
 Modelowanie przypadków użycia jest kluczową techniką inżynierii oprogramowania, stosowaną we wczesnych fazach projektu do specyfikacji wymagań funkcjonalnych. Celem jest opisanie, w jaki sposób system ma być używany i jakie wartości dostarcza swoim użytkownikom (aktorom). Diagramy przypadków użycia oraz towarzyszące im opisy tekstowe (specyfikacje) stanowią most komunikacyjny między interesariuszami biznesowymi a zespołem deweloperskim, definiując zakres i oczekiwane zachowanie systemu.
 
 \subsection{Kluczowe elementy przypadków użycia}
-
 Model przypadków użycia składa się z kilku fundamentalnych elementów, które razem tworzą spójny obraz funkcjonalności systemu:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/images.png}
+\end{figure}
+
 
 \begin{itemize}
     \item \textbf{Aktor (Actor)}: Reprezentuje rolę odgrywaną przez istotę zewnętrzną wchodzącą w interakcję z systemem. Może to być człowiek (np. "Klient", "Administrator"), inny system komputerowy (np. "System płatności") lub urządzenie (np. "Skaner kodów"). Aktorzy znajdują się \emph{poza} granicami systemu i definiują jego kontekst.
