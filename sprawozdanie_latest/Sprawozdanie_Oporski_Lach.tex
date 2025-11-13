@@ -1,0 +1,305 @@
+\documentclass[12pt,a4paper]{report}
+
+% --- Pakiety ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+% --- Dane dokumentu ---
+\title{
+  \vspace{3cm}
+  \textbf{Sprawozdanie}\\[0.5cm]
+  \textbf{Architektura i projektowanie systemów komputerowych}\\[1cm]
+  \Large Temat: Diagram przypadków użycia - modelowanie w UML\\[0.2cm]
+  \rule{10cm}{0.4pt}
+}
+\author{
+  Adam Oporski, Kajetan Lach \\[0.2cm]
+  Uniwersytet Gdański \\[0.2cm]
+  Kierunek: Informatyka Praktyczna
+}
+\date{Gdańsk, \today}
+
+\begin{document}
+
+% --- Strona tytułowa ---
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% --- Spisy ---
+\tableofcontents
+\listoffigures
+\newpage
+
+\chapter{Diagram klas}
+
+Modelowanie klas jest fundamentem projektowania obiektowego. Pozwala ono na statyczne przedstawienie struktury systemu poprzez zdefiniowanie bytów (klas), za które system jest odpowiedzialny, oraz relacji (powiązań) zachodzących między nimi. Diagram klas jest centralnym artefaktem w języku UML, służącym jako plan architektoniczny dla kodu źródłowego.
+
+\section{Diagram klas - notacja i semantyka}
+
+Diagram klas (Class Diagram) to statyczny diagram strukturalny, który opisuje budowę systemu poprzez pokazanie jego klas, ich atrybutów, operacji (metod) oraz relacji (powiązań) między tymi klasami. Jest to najczęściej używany i prawdopodobnie najważniejszy diagram UML w kontekście programowania obiektowego (OOP).
+
+Graficznie klasa jest reprezentowana jako prostokąt, zazwyczaj podzielony na trzy sekcje:
+\begin{itemize}
+    \item \textbf{Nazwa klasy:} Górna sekcja, zawiera nazwę (np. "KontoBankowe").
+    \item \textbf{Atrybuty (Attributes):} Środkowa sekcja, zawiera pola lub właściwości klasy (np. "saldo : Pieniadze").
+    \item \textbf{Operacje (Operations):} Dolna sekcja, zawiera metody lub funkcje, jakie klasa udostępnia (np. "wplac(kwota : Pieniadze)").
+\end{itemize}
+Diagram klas pokazuje nie tylko pojedyncze klasy, ale przede wszystkim sposób, w jaki łączą się one w spójny system za pomocą różnych typów relacji (asocjacji, agregacji, kompozycji, dziedziczenia).
+
+\section{Zastosowanie diagramu klas}
+
+Diagram klas jest wszechstronnym narzędziem wykorzystywanym na różnych etapach cyklu życia oprogramowania i do różnych celów:
+
+\begin{itemize}
+    \item \textbf{Analiza domeny (Domain Modeling):} We wczesnej fazie projektu diagram klas służy do modelowania kluczowych pojęć (bytów) z dziedziny problemu (np. w systemie bankowym będą to "Klient", "Konto", "Transakcja"). Pomaga to analitykom i deweloperom zrozumieć świat biznesu.
+    
+    \item \textbf{Projektowanie systemu (System Design):} Jest to podstawowe zastosowanie. Deweloperzy używają diagramów klas do projektowania architektury oprogramowania. Decydują, jakie klasy będą potrzebne, jakie będą miały atrybuty i operacje oraz jak będą ze sobą współpracować.
+    
+    \item \textbf{Generowanie kodu (Code Generation):} Wiele narzędzi typu CASE (Computer-Aided Software Engineering) potrafi automatycznie wygenerować szkielety kodu (np. w Javie, C\#, C++) bezpośrednio z diagramu klas.
+    
+    \item \textbf{Inżynieria wsteczna (Reverse Engineering):} Narzędzia potrafią również analizować istniejący kod źródłowy i generować z niego diagramy klas. Jest to niezwykle przydatne do zrozumienia i dokumentowania starszych (legacy) systemów.
+    
+    \item \textbf{Dokumentacja techniczna:} Diagram klas stanowi precyzyjny i jednoznaczny "plan" systemu, który jest łatwiejszy do zrozumienia niż przeglądanie tysięcy linii kodu. Służy jako kluczowy element dokumentacji architektonicznej.
+    
+    \item \textbf{Komunikacja w zespole:} Diagramy te stanowią wspólny język wizualny dla programistów, projektantów i analityków, ułatwiając dyskusje na temat struktury i odpowiedzialności poszczególnych modułów systemu.
+\end{itemize}
+
+\section{Atrybuty diagramu klas}
+
+Atrybuty diagramu klas to elementy, które opisują klasę. Są one reprezentowane jako prostokąty, zazwyczaj podzielone na trzy sekcje:
+\begin{itemize}
+    \item \textbf{Nazwa atrybutu:} Górna sekcja, zawiera nazwę atrybutu (np. "saldo").
+    \item \textbf{Typ atrybutu:} Środkowa sekcja, zawiera typ atrybutu (np. "Pieniadze").
+    \item \textbf{Dostępność:} Dolna sekcja, zawiera informację o dostępności atrybutu (np. "public").
+\end{itemize}
+
+\section{Podstawowe relacje stosowane w diagramie klas}
+
+Podstawowe relacje stosowane w diagramie klas to:
+\begin{itemize}
+    \item \textbf{Asocjacja (Association):} Relacja między dwiema klasami, która wskazuje, że obiekty jednej klasy są powiązane z obiektami drugiej klasy.
+    \item \textbf{Agregacja (Aggregation):} Relacja między dwiema klasami, która wskazuje, że obiekty jednej klasy są składowymi obiektów drugiej klasy.
+    \item \textbf{Kompozycja (Composition):} Relacja między dwiema klasami, która wskazuje, że obiekty jednej klasy są składowymi obiektów drugiej klasy i że obiekt drugiej klasy nie może istnieć bez obiektu pierwszej klasy.
+    \item \textbf{Dziedziczenie (Inheritance):} Relacja między dwiema klasami, która wskazuje, że klasa potomna dziedziczy atrybuty i operacje klasy nadrzędnej.
+\end{itemize}
+
+\section{Dziedziczenie}
+
+Dziedziczenie (Inheritance) to relacja między dwiema klasami, która wskazuje, że klasa potomna dziedziczy atrybuty i operacje klasy nadrzędnej.
+
+Graficznie dziedziczenie jest reprezentowane jako strzałka skierowana od klasy potomnej do klasy nadrzędnej.
+
+
+% ============================================================
+% CZĘŚĆ I – System aukcyjny (wymagania, struktura, opis działania)
+% ============================================================
+
+\chapter{System aukcyjny: wymagania, struktura i działanie}
+
+\section{Opis problemu i kontekst}
+System aukcyjny to platforma internetowa umożliwiająca użytkownikom wystawianie, licytowanie i kupowanie przedmiotów w ramach aukcji online. Głównym celem systemu jest zapewnienie bezpiecznej i przejrzystej przestrzeni transakcyjnej pomiędzy sprzedającymi i kupującymi. System wspiera różne typy użytkowników – obserwatorów, uczestników aukcji oraz administratorów – oferując im odpowiedni zakres funkcjonalności i poziom uprawnień.
+
+\section{Wymagania funkcjonalne}
+\subsection*{Obserwator}
+\begin{itemize}
+  \item System umożliwia założenie konta w serwisie aukcyjnym.
+  \item System umożliwia przeglądanie aktywnych aukcji.
+\end{itemize}
+
+\subsection*{Uczestnik aukcji}
+\begin{itemize}
+  \item System umożliwia wystawienie towaru na aukcję.
+  \item System umożliwia przeglądanie historii zawartych transakcji.
+  \item System umożliwia licytowanie towarów w ramach aktywnych aukcji.
+  \item System umożliwia finalizację transakcji po zakończeniu aukcji i wyłonieniu zwycięzcy.
+\end{itemize}
+
+\subsection*{Administrator}
+\begin{itemize}
+  \item System umożliwia zarządzanie serwisem.
+  \item System umożliwia zarządzanie kontami użytkowników.
+  \item System umożliwia zarządzanie aukcjami.
+  \item System umożliwia zarządzanie kategoriami towarów (CRUD).
+  \item System umożliwia finalizację transakcji w przypadku, gdy użytkownik wygra aukcję.
+\end{itemize}
+
+\section{Wymagania niefunkcjonalne}
+\begin{itemize}
+  \item System powinien umożliwiać obsługę dużej liczby jednoczesnych użytkowników.
+  \item Czas odpowiedzi interfejsu użytkownika nie powinien przekraczać 2 sekund.
+  \item System musi zapewniać bezpieczeństwo danych użytkowników (szyfrowanie haseł, certyfikaty SSL).
+  \item Architektura systemu powinna umożliwiać łatwe skalowanie oraz aktualizację komponentów.
+  \item System powinien być dostępny 24/7 z gwarancją dostępności na poziomie minimum 99,9\%.
+\end{itemize}
+
+\section{Struktura systemu (architektura wysokiego poziomu)}
+System aukcyjny został zaprojektowany w architekturze wielowarstwowej, obejmującej:
+\begin{itemize}
+  \item \textbf{Warstwę prezentacji} – interfejs webowy oraz API REST dla klientów mobilnych.
+  \item \textbf{Warstwę logiki biznesowej} – serwisy odpowiedzialne za obsługę aukcji, kont użytkowników, płatności i powiadomień.
+  \item \textbf{Warstwę danych} – relacyjną bazę danych przechowującą informacje o użytkownikach, aukcjach, ofertach i transakcjach.
+  \item \textbf{Warstwę bezpieczeństwa} – system autoryzacji i uwierzytelniania użytkowników.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.9\textwidth]{img/image0.jpeg}
+  \caption{Diagram przypadków użycia dla systemu aukcyjnego.}
+  \label{fig:aukcyjny-usecase}
+\end{figure}
+
+\section{Opis działania (przepływy)}
+\begin{itemize}
+  \item \textbf{Rejestracja użytkownika:} Obserwator wypełnia formularz rejestracyjny, a system tworzy nowe konto użytkownika.
+  \item \textbf{Wystawienie aukcji:} Uczestnik aukcji dodaje nowy przedmiot poprzez formularz, wprowadza cenę minimalną, zdjęcie i opis. Aukcja jest zapisywana w bazie danych i publikowana w systemie.
+  \item \textbf{Licytacja towaru:} Uczestnik aukcji wybiera interesujący przedmiot i składa ofertę. System porównuje kwoty i aktualizuje najwyższą ofertę.
+  \item \textbf{Finalizacja transakcji:} Po zakończeniu aukcji system automatycznie identyfikuje zwycięzcę i rozpoczyna proces płatności oraz potwierdzenia transakcji.
+  \item \textbf{Zarządzanie serwisem:} Administrator nadzoruje działanie systemu, może usuwać nieaktywne aukcje, zarządzać kontami użytkowników i kategoriami towarów.
+\end{itemize}
+
+% ============================================================
+% CZĘŚĆ II – Projekt „Czytelnia” (funkcjonalności + diagram)
+% ============================================================
+
+\chapter{Projekt \textit{Czytelnia}: funkcjonalności i diagram}
+
+\section{Opis systemu}
+System \textit{Czytelnia} (system biblioteczny) umożliwia użytkownikom dostęp do katalogu materiałów bibliotecznych w formie papierowej i cyfrowej, wspiera proces rezerwacji, wypożyczania i zarządzania zbiorami, a także automatyczne powiadomienia o terminach zwrotów. System rozróżnia dwa typy użytkowników: czytelników oraz administratorów.
+
+\section{Wymagania funkcjonalne}
+\subsection*{Użytkownik niezalogowany}
+\begin{itemize}
+  \item Zarejestrowanie się i stworzenie konta, podając imię, nazwisko, unikalny adres e-mail oraz hasło spełniające wymogi bezpieczeństwa.
+  \item Zalogowanie się do systemu za pomocą adresu e-mail oraz hasła.
+\end{itemize}
+
+\subsection*{Użytkownik zalogowany (czytelnik)}
+\begin{itemize}
+  \item Przeglądanie materiałów bibliotecznych w formie papierowej udostępnionych do wypożyczenia.
+  \item Przeglądanie materiałów bibliotecznych w formie cyfrowej udostępnionych do pobrania.
+  \item Przeglądanie materiałów papierowych aktualnie niedostępnych (wypożyczonych przez innych użytkowników).
+  \item Filtrowanie katalogu według autora, tytułu, wydawcy lub kategorii.
+  \item Zarezerwowanie materiałów dostępnych do wypożyczenia.
+  \item Prolongowanie aktualnego wypożyczenia.
+  \item Pobranie materiału w formie cyfrowej.
+  \item Dodanie nowych rekordów materiałów bibliotecznych wymagających akceptacji administratora.
+  \item Dodanie autora i wydawnictwa do bazy danych.
+  \item Otrzymywanie powiadomień o zdarzeniach (zaakceptowanie/odrzucenie materiału, wypożyczenia, przypomnienie o terminie zwrotu).
+  \item Oznaczanie powiadomień jako odczytane.
+  \item Przeglądanie trwających, oczekujących, zakończonych oraz odrzuconych wypożyczeń.
+  \item Wylogowanie się z systemu.
+\end{itemize}
+
+\subsection*{Administrator}
+\begin{itemize}
+  \item Przeglądanie materiałów oczekujących na zatwierdzenie.
+  \item Akceptowanie lub odrzucanie materiałów bibliotecznych.
+  \item Przeglądanie trwających lub zakończonych wypożyczeń wszystkich użytkowników.
+  \item Filtrowanie wypożyczeń według imienia i nazwiska użytkownika.
+  \item Wysyłanie powiadomień przypominających o terminie zwrotu.
+  \item Oznaczanie wypożyczeń jako zakończone.
+  \item Edytowanie informacji o materiałach bibliotecznych.
+  \item Usuwanie materiałów z bazy danych.
+\end{itemize}
+
+\section{Diagram przypadków użycia}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{img/image1.jpeg}
+  \caption{Diagram przypadków użycia dla projektu \textit{Czytelnia}.}
+  \label{fig:czytelnia-diagram}
+\end{figure}
+
+\section{Podsumowanie}
+System \textit{Czytelnia} stanowi kompleksowe rozwiązanie dla nowoczesnych bibliotek cyfrowych i tradycyjnych. Dzięki rozbudowanym funkcjonalnościom filtrowania, zarządzania zbiorami oraz automatycznym powiadomieniom o terminach zwrotów, wspiera zarówno użytkowników końcowych, jak i administratorów.
+
+% ============================================================
+% CZĘŚĆ III – Własny przykład UML: System wypożyczania samochodów
+% ============================================================
+
+\chapter{Własny przykład UML – System wypożyczania samochodów}
+
+\section{Opis systemu}
+System wypożyczania samochodów jest prostą aplikacją umożliwiającą klientom rezerwację oraz wynajem pojazdów na określony czas. System obsługuje dwóch głównych aktorów: \textbf{Klienta} oraz \textbf{Administratora}. Klient może przeglądać dostępne pojazdy, dokonywać rezerwacji oraz zwrotu samochodu. Administrator zarządza flotą pojazdów oraz kontroluje proces rezerwacji.
+
+\section{Wymagania funkcjonalne}
+\subsection*{Klient}
+\begin{itemize}
+  \item Przeglądanie listy dostępnych samochodów.
+  \item Filtrowanie pojazdów po typie, cenie lub dostępności.
+  \item Dokonywanie rezerwacji pojazdu na wybrany okres.
+  \item Anulowanie rezerwacji przed jej rozpoczęciem.
+  \item Zwrot samochodu po zakończeniu okresu wypożyczenia.
+\end{itemize}
+
+\subsection*{Administrator}
+\begin{itemize}
+  \item Dodawanie nowych samochodów do floty.
+  \item Edytowanie informacji o samochodach.
+  \item Usuwanie samochodów z systemu.
+  \item Przeglądanie wszystkich rezerwacji i historii wypożyczeń.
+  \item Zmiana statusu rezerwacji (zatwierdzenie, anulowanie, zakończenie).
+\end{itemize}
+
+\section{Wymagania niefunkcjonalne}
+\begin{itemize}
+  \item System powinien umożliwiać obsługę wielu użytkowników jednocześnie.
+  \item Czas odpowiedzi na żądanie nie może przekraczać 3 sekund.
+  \item System powinien przechowywać dane w relacyjnej bazie danych z kopią zapasową wykonywaną co 24 godziny.
+  \item Interfejs użytkownika powinien być intuicyjny i dostępny w przeglądarce.
+\end{itemize}
+
+\section{Diagram przypadków użycia}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.9\textwidth]{img/image2.jpeg}
+  \caption{Diagram przypadków użycia – System wypożyczania samochodów.}
+  \label{fig:uml-rentcar}
+\end{figure}
+
+\section{Opis działania (przykładowy scenariusz)}
+\begin{itemize}
+  \item Klient loguje się do systemu i przegląda listę dostępnych samochodów.
+  \item Wybiera interesujący go pojazd i dokonuje rezerwacji.
+  \item Administrator otrzymuje informację o nowej rezerwacji i może ją zatwierdzić lub odrzucić.
+  \item Po zakończeniu okresu wypożyczenia klient zwraca samochód, a system aktualizuje jego status w bazie danych.
+\end{itemize}
+
+\section{Komentarz projektowy}
+System wypożyczania samochodów to przykład prostego rozwiązania typu klient–serwer. Logika biznesowa jest rozdzielona od interfejsu użytkownika, co umożliwia łatwą rozbudowę o dodatkowe funkcje, takie jak płatności online, historia transakcji czy integracja z systemem GPS.
+
+% ============================================================
+% PODSUMOWANIE
+% ============================================================
+
+\chapter*{Podsumowanie}
+\addcontentsline{toc}{chapter}{Podsumowanie}
+
+W ramach niniejszego sprawozdania przeanalizowano trzy różne systemy informatyczne, modelując ich działanie za pomocą diagramów przypadków użycia UML.
+Każdy z przedstawionych przykładów reprezentuje odmienny obszar zastosowania technologii informatycznych, jednak wszystkie łączy wspólny cel –
+zrozumienie relacji pomiędzy użytkownikami systemu a jego funkcjonalnościami.
+
+Pierwszy przykład – \textbf{system aukcyjny} – ukazuje typową architekturę aplikacji e-commerce, w której kluczową rolę odgrywa interakcja pomiędzy sprzedawcami, kupującymi i administratorem systemu.
+Drugi projekt – \textbf{system biblioteczny „Czytelnia”} – przedstawia bardziej złożony model, w którym istotna jest kontrola dostępu do zasobów, obsługa powiadomień oraz proces akceptacji operacji przez administratora.
+Trzeci przykład – \textbf{system wypożyczania samochodów} – zaprezentowano jako prosty, lecz przejrzysty model klient–serwer, pozwalający na łatwe rozszerzanie o kolejne moduły biznesowe.
+
+Przeprowadzone modelowanie pozwala zauważyć, że diagramy przypadków użycia stanowią efektywne narzędzie do wizualizacji wymagań funkcjonalnych systemów.
+Ułatwiają one komunikację pomiędzy analitykami, projektantami i interesariuszami oraz stanowią pierwszy krok w kierunku tworzenia bardziej szczegółowych modeli projektowych – takich jak diagramy klas, sekwencji czy aktywności.
+
+Opracowanie to pokazuje, że umiejętność analizy wymagań i ich odwzorowania w notacji UML jest kluczowym elementem w procesie projektowania systemów informatycznych.
+\end{document}
