@@ -284,6 +284,63 @@ System wypożyczania samochodów jest prostą aplikacją umożliwiającą klient
 System wypożyczania samochodów to przykład prostego rozwiązania typu klient–serwer. Logika biznesowa jest rozdzielona od interfejsu użytkownika, co umożliwia łatwą rozbudowę o dodatkowe funkcje, takie jak płatności online, historia transakcji czy integracja z systemem GPS.
 
 % ============================================================
+% CZĘŚĆ IV – Wiele diagramów klas w złożonych projektach
+% ============================================================
+
+\chapter{Wiele diagramów klas w złożonych projektach - przykładowa struktura}
+
+W przypadku systemów o dużej skali, próba przedstawienia całej struktury klas na jednym, monolicznym diagramie jest niepraktyczna i prowadzi do jego całkowitej nieczytelności. Diagram taki staje się "plątaniną" (tzw. "big ball of mud"), która zaciemnia architekturę, zamiast ją wyjaśniać. Kluczową strategią jest dekompozycja modelu na wiele mniejszych, wyspecjalizowanych diagramów klas, z których każdy przedstawia system z innej perspektywy lub koncentruje się na konkretnym jego fragmencie.
+
+\section{Problem złożoności w monolicznym diagramie klas}
+
+Monolityczny diagram klas w dużym projekcie cierpi na kilka podstawowych problemów:
+\begin{itemize}
+    \item \textbf{Przeciążenie informacyjne:} Zbyt wiele klas i relacji na jednym diagramie uniemożliwia ich jednoczesne zrozumienie.
+    \item \textbf{Nieczytelność graficzna:} Linie relacji krzyżują się w chaotyczny sposób, a same klasy muszą być mocno pomniejszone, aby zmieścić się na diagramie.
+    \item \textbf{Brak separacji odpowiedzialności (Separation of Concerns):} Diagram miesza ze sobą różne aspekty systemu (np. logikę biznesową, dostęp do danych, interfejs użytkownika), utrudniając zrozumienie poszczególnych warstw.
+    \item \textbf{Trudności w utrzymaniu:} Każda, nawet mała zmiana w kodzie, może wymagać skomplikowanej aktualizacji centralnego diagramu, co często prowadzi do jego deaktualizacji.
+\end{itemize}
+
+\section{Strategie podziału modelu klas}
+
+Aby zarządzać złożonością, model dzieli się na wiele diagramów, stosując różne kryteria podziału. Ważne jest, aby pamiętać, że jest to \textbf{wiele widoków (views) na ten sam, jeden model} -- klasa "Użytkownik" jest tą samą klasą, nawet jeśli pojawi się na trzech różnych diagramach.
+
+\subsection{Podział ze względu na pakiety (widok logiczny)}
+
+Jest to najbardziej naturalny i powszechny sposób podziału. Model jest organizowany w pakiety (np. odpowiadające przestrzeniom nazw lub modułom), a następnie tworzone są diagramy klas:
+\begin{itemize}
+    \item \textbf{Diagram pakietów:} Pokazuje widok "z lotu ptaka" -- same pakiety i zależności między nimi (np. pakiet \texttt{LogikaBiznesowa} zależy od \texttt{DostepDoDanych}).
+    \item \textbf{Diagram klas dla każdego pakietu:} Dla każdego istotnego pakietu tworzony jest osobny diagram, pokazujący \emph{tylko} klasy zawarte w tym pakiecie oraz (opcjonalnie) klasy spoza pakietu, z którymi się one bezpośrednio komunikują.
+\end{itemize}
+\textbf{Przykład:} Osobny diagram dla pakietu "Zarządzanie Zamówieniami", osobny dla "Płatności" i osobny dla "Magazyn".
+
+\subsection{Podział ze względu na realizację przypadku użycia}
+
+Ta strategia koncentruje się na aspekcie behawioralnym. Dla kluczowych lub złożonych przypadków użycia tworzy się diagramy klas, które pokazują \emph{tylko te klasy}, które biorą udział w realizacji danego przypadku.
+\begin{itemize}
+    \item Jest to często widok uproszczony, pomijający wiele atrybutów i metod klas, które nie są istotne dla danego scenariusza.
+    \item Taki diagram jest doskonałym uzupełnieniem diagramu sekwencji dla tego samego przypadku użycia.
+\end{itemize}
+\textbf{Przykład:} Diagram dla przypadku "Złóż zamówienie" pokazywałby klasy \texttt{KontrolerZamowien}, \texttt{Zamowienie}, \texttt{Koszyk}, \texttt{PozycjaZamowienia} oraz interfejs \texttt{SerwisPlatnosci}.
+
+\subsection{Podział ze względu na wzorce projektowe lub architektoniczne}
+
+Model można również podzielić, aby pokazać implementację konkretnych wzorców lub warstw architektury.
+\begin{itemize}
+    \item \textbf{Wzorzec MVC (Model-View-Controller):} Można stworzyć trzy diagramy -- jeden dla klas Modelu (logika biznesowa, byty), drugi dla Widoku (GUI) i trzeci dla Kontrolerów (obsługa żądań).
+    \item \textbf{Architektura warstwowa:} Osobne diagramy dla warstwy prezentacji, warstwy aplikacji (serwisów), warstwy domeny i warstwy infrastruktury (np. repozytoriów).
+\end{itemize}
+
+\section{Zarządzanie spójnością między diagramami}
+
+Używanie wielu diagramów rodzi ryzyko niespójności. Aby temu zapobiec, kluczowe jest używanie profesjonalnych narzędzi CASE (np. Visual Paradigm, Enterprise Architect, StarUML):
+\begin{itemize}
+    \item \textbf{Centralne repozytorium modelu (Central Repository):} Narzędzie przechowuje jeden, centralny model (zbiór wszystkich klas, interfejsów itp.). Diagramy są tylko różnymi "widokami" na ten model.
+    \item \textbf{Spójność zmian:} Jeśli zmienimy nazwę operacji w klasie \texttt{Użytkownik} na jednym diagramie, narzędzie automatycznie zaktualizuje tę nazwę na wszystkich innych diagramach, na których ta klasa występuje.
+    \item \textbf{Nawigacja:} Dobre narzędzia pozwalają na łatwą nawigację (np. kliknięcie na klasę \texttt{Zamowienie} na diagramie przypadku użycia i przejście do jej pełnej definicji na diagramie pakietu "Zamówienia").
+\end{itemize}
+
+% ============================================================
 % PODSUMOWANIE
 % ============================================================
 
